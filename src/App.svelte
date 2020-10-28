@@ -13,11 +13,11 @@
   import Navbar from "./components/Navbar/Navbar.svelte";
   import Sidebar from "./components/Navbar/Sidebar.svelte";
 
-// alert
+  // alert
   import Alert from "./components/Alert.svelte";
 
-// global store
-   import globalStore from "./stores/globalStore";
+  // global store
+  import globalStore from "./stores/globalStore";
 </script>
 
 <Router>
@@ -29,10 +29,11 @@
   {#if $globalStore.alert}
     <Alert />
   {/if}
-  <Route path="/" component={Home} />
-  <Route path="about" component={About} />
-  <Route path="items" component={Items} />
-  <Route path="login" component={Login} />
-  <Route path="*" component={NotFound} />
-</Router>
 
+      <Route path="/" component={Home} />
+      <Route path="about" component={About} />
+      <Route path="items" component={Items} />
+      <Route path="login" component={Login} />
+      <Route path="*" component={NotFound} />
+
+</Router>
