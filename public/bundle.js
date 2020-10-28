@@ -2417,12 +2417,13 @@ var app = (function () {
     			t5 = space();
     			ion_card_content = element("ion-card-content");
     			ion_card_content.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
-    			add_location(p, file, 18, 2, 434);
-    			add_location(ion_card_subtitle, file, 23, 6, 554);
-    			add_location(ion_card_title, file, 24, 6, 609);
-    			add_location(ion_card_header, file, 22, 4, 529);
-    			add_location(ion_card_content, file, 26, 4, 680);
-    			add_location(ion_card, file, 20, 2, 511);
+    			add_location(p, file, 18, 2, 451);
+    			add_location(ion_card_subtitle, file, 23, 6, 571);
+    			add_location(ion_card_title, file, 24, 6, 626);
+    			add_location(ion_card_header, file, 22, 4, 546);
+    			add_location(ion_card_content, file, 26, 4, 697);
+    			add_location(ion_card, file, 20, 2, 528);
+    			set_custom_element_data(ion_content, "class", "app-page");
     			add_location(ion_content, file, 17, 0, 417);
     		},
 

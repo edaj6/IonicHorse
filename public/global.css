@@ -40,10 +40,6 @@ ion-card{
   margin: 5px; 
 }
 
-/* ion-card-content{
-  border: 1px solid red;
-} */
-
 .app-page{
   max-height: calc(100vh - 100px);
   /* border: 1px solid red; */
@@ -51,14 +47,14 @@ ion-card{
 
 /* Wide screen only */
 @media only screen and (min-width: 992px) {
-  /* .app-page  {
+  .app-page  {
     width: 100%;    
     border: 100px solid white;
     border-top: 0px;
     align-items: center;
     display: flex;
     justify-content: center;
-  } */
+  }
   ion-card{
     max-width: 400px;
   }

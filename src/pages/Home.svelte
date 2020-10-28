@@ -15,7 +15,7 @@
   });
 </script>
 
-<ion-content>
+<ion-content class="app-page">
   <p>Testing svelte with identity server, azure functions and storage</p>
 
   <ion-card>
