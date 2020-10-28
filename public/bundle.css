@@ -1,10 +1,4 @@
-.box.svelte-119iyqa:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.8)}.right.svelte-119iyqa{text-align:right}.box.svelte-119iyqa{box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-  ;float:left;margin:10px;min-height:150px;width:300px;background:white;border-radius:5px;padding:2px 16px}.effect2.svelte-119iyqa{position:relative}.effect2.svelte-119iyqa:before,.effect2.svelte-119iyqa:after{z-index:-1;position:absolute;content:"";bottom:15px;left:10px;width:50%;top:80%;max-width:300px;background:#777;-webkit-box-shadow:0 15px 10px #777;-moz-box-shadow:0 15px 10px #777;box-shadow:0 15px 10px #777;-webkit-transform:rotate(-3deg);-moz-transform:rotate(-3deg);-o-transform:rotate(-3deg);-ms-transform:rotate(-3deg);transform:rotate(-3deg)}.effect2.svelte-119iyqa:after{-webkit-transform:rotate(3deg);-moz-transform:rotate(3deg);-o-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg);right:10px;left:auto}
 ion-card.svelte-8rpro:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.8)}
+ion-title.svelte-o6zyg5{font-size:1.5rem;text-transform:capitalize;font-weight:400;letter-spacing:var(--mainSpacing);display:block;margin:0.5rem 0;transition:var(--mainTransition)}
 
 /*# sourceMappingURL=bundle.css.map */

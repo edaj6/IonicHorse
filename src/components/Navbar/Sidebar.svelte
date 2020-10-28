@@ -32,6 +32,7 @@
             use:link
             on:click={() => {
               globalStore.toggleItem('sidebar', false);
+              $globalStore.selectedPage = sideLink.text;
             }}>
             {sideLink.text}
           </a>

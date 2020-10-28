@@ -6,17 +6,13 @@
     "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
   );
 
-  let title = "Personer";
+  export let title = "About page";
   let url_default =
     "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 </script>
 
 <ion-content>
-
-<h1>About page</h1>
-
-  <p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
-
+<p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
 
 {#await $response}
   <Skeleton repeat={8} />

@@ -69,6 +69,10 @@ var app = (function () {
                 result[k] = props[k];
         return result;
     }
+    function set_store_value(store, ret, value = ret) {
+        store.set(value);
+        return ret;
+    }
 
     const is_client = typeof window !== 'undefined';
     let now = is_client
@@ -2724,7 +2728,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (34:0) {:catch e}
+    // (30:0) {:catch e}
     function create_catch_block(ctx) {
     	var div1, div0, h3, t1, h4, h4_intro, t3, p, t4_value = ctx.e + "", t4, p_intro;
 
@@ -2740,13 +2744,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 36, 6, 1058);
+    			add_location(h3, file$2, 32, 6, 1038);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 35, 4, 1031);
-    			add_location(h4, file$2, 38, 4, 1086);
-    			add_location(p, file$2, 39, 4, 1127);
+    			add_location(div0, file$2, 31, 4, 1011);
+    			add_location(h4, file$2, 34, 4, 1066);
+    			add_location(p, file$2, 35, 4, 1107);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 34, 2, 1000);
+    			add_location(div1, file$2, 30, 2, 980);
     		},
 
     		m: function mount(target, anchor) {
@@ -2790,11 +2794,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(34:0) {:catch e}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(30:0) {:catch e}", ctx });
     	return block;
     }
 
-    // (23:0) {:then data}
+    // (19:0) {:then data}
     function create_then_block(ctx) {
     	var each_1_anchor;
 
@@ -2858,11 +2862,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(23:0) {:then data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(19:0) {:then data}", ctx });
     	return block;
     }
 
-    // (24:2) {#each data as { firstName, lastName, birthday, url }
+    // (20:2) {#each data as { firstName, lastName, birthday, url }
     function create_each_block$1(ctx) {
     	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, t7_value = ctx.birthday + "", t7, t8;
 
@@ -2882,11 +2886,11 @@ var app = (function () {
     			t6 = text("Point denne måned: ");
     			t7 = text(t7_value);
     			t8 = space();
-    			add_location(ion_card_subtitle, file$2, 26, 8, 742);
-    			add_location(ion_card_title, file$2, 27, 8, 799);
-    			add_location(ion_card_header, file$2, 25, 6, 715);
-    			add_location(ion_card_content, file$2, 30, 6, 890);
-    			add_location(ion_card, file$2, 24, 4, 697);
+    			add_location(ion_card_subtitle, file$2, 22, 8, 722);
+    			add_location(ion_card_title, file$2, 23, 8, 779);
+    			add_location(ion_card_header, file$2, 21, 6, 695);
+    			add_location(ion_card_content, file$2, 26, 6, 870);
+    			add_location(ion_card, file$2, 20, 4, 677);
     		},
 
     		m: function mount(target, anchor) {
@@ -2925,11 +2929,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(24:2) {#each data as { firstName, lastName, birthday, url }", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(20:2) {#each data as { firstName, lastName, birthday, url }", ctx });
     	return block;
     }
 
-    // (21:18)     <Skeleton repeat={8}
+    // (17:18)     <Skeleton repeat={8}
     function create_pending_block(ctx) {
     	var current;
 
@@ -2966,12 +2970,12 @@ var app = (function () {
     			destroy_component(skeleton, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(21:18)     <Skeleton repeat={8}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(17:18)     <Skeleton repeat={8}", ctx });
     	return block;
     }
 
     function create_fragment$2(ctx) {
-    	var ion_content, h1, t1, p, t3, promise, current;
+    	var ion_content, p, t_1, promise, current;
 
     	let info = {
     		ctx,
@@ -2990,17 +2994,13 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			ion_content = element("ion-content");
-    			h1 = element("h1");
-    			h1.textContent = "About page";
-    			t1 = space();
     			p = element("p");
     			p.textContent = "Udviklere på dette projekt (data fra dotnet azure function/cosmos db)";
-    			t3 = space();
+    			t_1 = space();
 
     			info.block.c();
-    			add_location(h1, file$2, 15, 0, 460);
-    			add_location(p, file$2, 17, 2, 485);
-    			add_location(ion_content, file$2, 13, 0, 443);
+    			add_location(p, file$2, 14, 0, 467);
+    			add_location(ion_content, file$2, 13, 0, 452);
     		},
 
     		l: function claim(nodes) {
@@ -3009,10 +3009,8 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert_dev(target, ion_content, anchor);
-    			append_dev(ion_content, h1);
-    			append_dev(ion_content, t1);
     			append_dev(ion_content, p);
-    			append_dev(ion_content, t3);
+    			append_dev(ion_content, t_1);
 
     			info.block.m(ion_content, info.anchor = null);
     			info.mount = () => ion_content;
@@ -3059,8 +3057,6 @@ var app = (function () {
     	return block;
     }
 
-    let title = "Personer";
-
     let url_default =
         "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 
@@ -3072,24 +3068,43 @@ var app = (function () {
         "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
       ); validate_store(response, 'response'); component_subscribe($$self, response, $$value => { $response = $$value; $$invalidate('$response', $response); });
 
+      let { title = "About page" } = $$props;
+
+    	const writable_props = ['title'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<About> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('title' in $$props) $$invalidate('title', title = $$props.title);
+    	};
+
     	$$self.$capture_state = () => {
-    		return {};
+    		return { title, url_default, $response };
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('title' in $$props) title = $$props.title;
+    		if ('title' in $$props) $$invalidate('title', title = $$props.title);
     		if ('url_default' in $$props) url_default = $$props.url_default;
     		if ('$response' in $$props) response.set($response);
     	};
 
-    	return { response, $response };
+    	return { response, title, $response };
     }
 
     class About extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, []);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, ["title"]);
     		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "About", options, id: create_fragment$2.name });
+    	}
+
+    	get title() {
+    		throw new Error("<About>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set title(value) {
+    		throw new Error("<About>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -3226,7 +3241,8 @@ var app = (function () {
       cart: false,
       alert: false,
       alertText: "default alert",
-      alertDanger: false
+      alertDanger: false,
+      selectedPage: ""
     });
 
     const store = {
@@ -4819,7 +4835,7 @@ var app = (function () {
     const file$6 = "src\\components\\Navbar\\SmallNavbar.svelte";
 
     function create_fragment$8(ctx) {
-    	var nav, div, button, i, t, a, img, link_action, dispose;
+    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, dispose;
 
     	const block = {
     		c: function create() {
@@ -4827,25 +4843,22 @@ var app = (function () {
     			div = element("div");
     			button = element("button");
     			i = element("i");
-    			t = space();
-    			a = element("a");
-    			img = element("img");
+    			t0 = space();
+    			ion_toolbar = element("ion-toolbar");
+    			ion_title = element("ion-title");
+    			t1 = text(t1_value);
     			attr_dev(i, "class", "fas fa-bars");
-    			add_location(i, file$6, 16, 6, 466);
+    			add_location(i, file$6, 14, 6, 363);
     			attr_dev(button, "class", "btn-sidebar-toggle");
     			attr_dev(button, "aria-label", "Sidebar Menu");
-    			add_location(button, file$6, 10, 4, 308);
-    			attr_dev(img, "src", "/assets/images/logo.svg");
-    			attr_dev(img, "class", "logo");
-    			attr_dev(img, "alt", "razors logo");
-    			add_location(img, file$6, 20, 6, 577);
-    			attr_dev(a, "href", "/");
-    			attr_dev(a, "class", "nav-logo");
-    			add_location(a, file$6, 19, 4, 531);
+    			add_location(button, file$6, 8, 4, 206);
+    			add_location(ion_title, file$6, 17, 6, 441);
+    			set_custom_element_data(ion_toolbar, "mode", "ios");
+    			add_location(ion_toolbar, file$6, 16, 4, 409);
     			attr_dev(div, "class", "nav-center");
-    			add_location(div, file$6, 8, 2, 249);
+    			add_location(div, file$6, 6, 2, 147);
     			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$6, 7, 0, 225);
+    			add_location(nav, file$6, 5, 0, 123);
     			dispose = listen_dev(button, "click", ctx.click_handler);
     		},
 
@@ -4858,13 +4871,18 @@ var app = (function () {
     			append_dev(nav, div);
     			append_dev(div, button);
     			append_dev(button, i);
-    			append_dev(div, t);
-    			append_dev(div, a);
-    			append_dev(a, img);
-    			link_action = link.call(null, a) || {};
+    			append_dev(div, t0);
+    			append_dev(div, ion_toolbar);
+    			append_dev(ion_toolbar, ion_title);
+    			append_dev(ion_title, t1);
     		},
 
-    		p: noop,
+    		p: function update(changed, ctx) {
+    			if ((changed.$globalStore) && t1_value !== (t1_value = ctx.$globalStore.selectedPage + "")) {
+    				set_data_dev(t1, t1_value);
+    			}
+    		},
+
     		i: noop,
     		o: noop,
 
@@ -4873,7 +4891,6 @@ var app = (function () {
     				detach_dev(nav);
     			}
 
-    			if (link_action && typeof link_action.destroy === 'function') link_action.destroy();
     			dispose();
     		}
     	};
@@ -4881,9 +4898,13 @@ var app = (function () {
     	return block;
     }
 
-    function instance$6($$self) {
-    	
-       let openSidebar = store.toggleItem;
+    function instance$6($$self, $$props, $$invalidate) {
+    	let $globalStore;
+
+    	validate_store(store, 'globalStore');
+    	component_subscribe($$self, store, $$value => { $globalStore = $$value; $$invalidate('$globalStore', $globalStore); });
+
+    	let openSidebar = store.toggleItem;
 
     	const click_handler = () => {
     	        openSidebar('sidebar', true);
@@ -4895,9 +4916,10 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('openSidebar' in $$props) $$invalidate('openSidebar', openSidebar = $$props.openSidebar);
+    		if ('$globalStore' in $$props) store.set($globalStore);
     	};
 
-    	return { openSidebar, click_handler };
+    	return { openSidebar, $globalStore, click_handler };
     }
 
     class SmallNavbar extends SvelteComponentDev {
@@ -5445,6 +5467,10 @@ var app = (function () {
     function create_each_block$3(ctx) {
     	var li, a, t_value = ctx.sideLink.text + "", t, link_action, dispose;
 
+    	function click_handler_1() {
+    		return ctx.click_handler_1(ctx);
+    	}
+
     	const block = {
     		c: function create() {
     			li = element("li");
@@ -5453,7 +5479,7 @@ var app = (function () {
     			attr_dev(a, "href", ctx.sideLink.url);
     			add_location(a, file$9, 29, 10, 888);
     			add_location(li, file$9, 28, 8, 872);
-    			dispose = listen_dev(a, "click", ctx.click_handler_1);
+    			dispose = listen_dev(a, "click", click_handler_1);
     		},
 
     		m: function mount(target, anchor) {
@@ -5463,7 +5489,9 @@ var app = (function () {
     			link_action = link.call(null, a) || {};
     		},
 
-    		p: noop,
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
@@ -5520,7 +5548,7 @@ var app = (function () {
     			attr_dev(img, "class", "logo sidebar-logo");
     			attr_dev(img, "alt", "razors logo");
     			add_location(img, file$9, 21, 4, 675);
-    			add_location(li, file$9, 39, 6, 1133);
+    			add_location(li, file$9, 40, 6, 1191);
     			attr_dev(ul, "class", "sidebar-links");
     			add_location(ul, file$9, 26, 4, 803);
     			attr_dev(div1, "class", "sidebar");
@@ -5629,22 +5657,34 @@ var app = (function () {
     	return block;
     }
 
-    function instance$9($$self) {
+    function instance$9($$self, $$props, $$invalidate) {
+    	let $globalStore;
+
+    	validate_store(store, 'globalStore');
+    	component_subscribe($$self, store, $$value => { $globalStore = $$value; $$invalidate('$globalStore', $globalStore); });
+
     	const click_handler = () => {
     	          store.toggleItem('sidebar', false);
     	        };
 
-    	const click_handler_1 = () => {
+    	const click_handler_1 = ({ sideLink }) => {
     	              store.toggleItem('sidebar', false);
+    	              set_store_value(store, $globalStore.selectedPage = sideLink.text, $globalStore);
     	            };
 
     	$$self.$capture_state = () => {
     		return {};
     	};
 
-    	$$self.$inject_state = $$props => {};
+    	$$self.$inject_state = $$props => {
+    		if ('$globalStore' in $$props) store.set($globalStore);
+    	};
 
-    	return { click_handler, click_handler_1 };
+    	return {
+    		$globalStore,
+    		click_handler,
+    		click_handler_1
+    	};
     }
 
     class Sidebar extends SvelteComponentDev {

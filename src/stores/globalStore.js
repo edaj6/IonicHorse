@@ -5,7 +5,8 @@ const globalStore = writable({
   cart: false,
   alert: false,
   alertText: "default alert",
-  alertDanger: false
+  alertDanger: false,
+  selectedPage: ""
 });
 
 const store = {

@@ -1,8 +1,6 @@
 <script>
-//   import CartButton from "../Cart/CartButton.svelte";
-  import { link } from "svelte-routing";
-   import globalStore from "../../stores/globalStore";
-   let openSidebar = globalStore.toggleItem;
+  import globalStore from "../../stores/globalStore";
+  let openSidebar = globalStore.toggleItem;
 </script>
 
 <nav class="navbar">
@@ -10,17 +8,18 @@
     <!-- sidebar toggle -->
     <button
       class="btn-sidebar-toggle"
-      aria-label="Sidebar Menu" 
+      aria-label="Sidebar Menu"
       on:click={() => {
         openSidebar('sidebar', true);
       }}>
       <i class="fas fa-bars" />
     </button>
+    <ion-toolbar mode="ios">
+      <ion-title>{$globalStore.selectedPage}</ion-title>
+    </ion-toolbar>
     <!-- logo -->
-    <a href="/" use:link class="nav-logo">
+    <!-- <a href="/" use:link class="nav-logo">
       <img src="/assets/images/logo.svg" class="logo" alt="razors logo" />
-    </a>
-    <!-- cart button -->
-    <!-- <CartButton /> -->
+    </a> -->
   </div>
 </nav>

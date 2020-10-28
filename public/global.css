@@ -176,6 +176,15 @@ Navbar
   font-size: 1rem;
   color: var(--mainWhite);
 }
+.navbar ion-title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: var(--mainSpacing);
+  display: block;
+  margin: 0.5rem 0;
+  transition: var(--mainTransition);
+}
 .nav-links {
   display: flex;
   align-items: center;
