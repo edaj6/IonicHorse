@@ -35,6 +35,12 @@ Global Styles
   box-sizing: border-box;
 }
 
+ion-card{
+  float: left;
+  margin: 5px;
+  max-width: 400px;
+}
+
 /* Wide screen only */
 @media only screen and (min-width: 992px) {
   ion-content  {
@@ -44,9 +50,6 @@ Global Styles
     align-items: center;
     /* display: flex; */
   justify-content: center;
-  }
-  ion-card{
-    max-width: 400px;
   }
 }
 
