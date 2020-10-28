@@ -13,8 +13,6 @@
 
 <ion-content>
 
-<h1>Home page</h1>
-
 <p>Testing svelte with identity server, azure functions and storage</p>
 
 </ion-content>

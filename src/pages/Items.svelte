@@ -5,8 +5,6 @@
 </script>
 <ion-content>
 
-<h1>Items page</h1>
-
 <ion-card>
     <img src={url_default} alt="hest" />
     <ion-card-header>
