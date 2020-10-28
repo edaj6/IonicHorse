@@ -17,5 +17,3 @@
   <SmallNavbar />
 {/if}
 
-{screenWidth}
-

@@ -31,3 +31,12 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<style>
+
+/* On mouse-over, add a deeper shadow */
+ion-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+
+</style>

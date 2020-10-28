@@ -1,5 +1,5 @@
 <script>
-import Skeleton from "../components/Skeleton.svelte";
+  import Skeleton from "../components/Skeleton.svelte";
   import { blur, slide, scale, fade, fly } from "svelte/transition";
   import { getData } from "../components/fetcher";
   const response = getData(

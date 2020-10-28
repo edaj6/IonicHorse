@@ -1,20 +1,16 @@
 <script>
-import { onMount } from "svelte";
-    onMount(async () => {
+  import { onMount } from "svelte";
+  import loginUser from "../apis/loginUser";
+
+  //wake up services
+  onMount(async () => {
     const response = await fetch(
-      `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`,
-    );    
+      `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`
+    );
+    await loginUser("", "");
   });
 </script>
 
-<svelte:head>
-  <title>Ionic / Svelte UI - Smartlearning learn</title>
-</svelte:head>
+<h1>Home page</h1>
 
-  <h1>
-    Home page
-  </h1>
-<p>
-      Testing svelte/ionic with identity server, azure functions and storage
-</p> 
-
+<p>Testing svelte with identity server, azure functions and storage</p>
