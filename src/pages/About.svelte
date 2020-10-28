@@ -11,7 +11,7 @@
     "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 </script>
 
-<ion-content>
+<ion-content class="app-page">
 <p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
 
 {#await $response}
@@ -24,7 +24,10 @@
         <ion-card-title>{firstName} {lastName}</ion-card-title>
       </ion-card-header>
 
-      <ion-card-content>Point denne måned: {birthday}</ion-card-content>
+      <ion-card-content>
+      Ansat siden starten af 2000, det ser rigtig godt ud.. <br/>
+      Point denne måned: <br/>
+      {birthday}</ion-card-content>
     </ion-card>
   {/each}
 {:catch e}

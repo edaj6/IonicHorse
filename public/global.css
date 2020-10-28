@@ -37,20 +37,28 @@ Global Styles
 
 ion-card{
   float: left;
-  margin: 5px;
-  
+  margin: 5px; 
+}
+
+/* ion-card-content{
+  border: 1px solid red;
+} */
+
+.app-page{
+  max-height: calc(100vh - 100px);
+  /* border: 1px solid red; */
 }
 
 /* Wide screen only */
 @media only screen and (min-width: 992px) {
-  ion-content  {
-    width: 100%;
-    border: 80px solid white;
+  /* .app-page  {
+    width: 100%;    
+    border: 100px solid white;
     border-top: 0px;
     align-items: center;
-    /* display: flex; */
-  justify-content: center;
-  }
+    display: flex;
+    justify-content: center;
+  } */
   ion-card{
     max-width: 400px;
   }
@@ -614,7 +622,7 @@ Expense Form
 .form {
   width: var(--smallWidth);
   margin: 0 auto;
-  margin-top: 10rem;
+  margin-top: 3rem;
   max-width: 35rem;
 }
 .login-form,

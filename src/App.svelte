@@ -12,6 +12,7 @@
   // components
   import Navbar from "./components/Navbar/Navbar.svelte";
   import Sidebar from "./components/Navbar/Sidebar.svelte";
+  import Footer from "./components/Footer.svelte";
 
   // alert
   import Alert from "./components/Alert.svelte";
@@ -21,6 +22,7 @@
 </script>
 
 <Router>
+
   <Navbar />
 
   {#if $globalStore.sidebar}
@@ -36,4 +38,5 @@
       <Route path="login" component={Login} />
       <Route path="*" component={NotFound} />
 
+<!-- <Footer /> -->
 </Router>

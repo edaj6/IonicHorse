@@ -3,7 +3,7 @@
   let url_default = "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg"
 
 </script>
-<ion-content>
+<ion-content class="app-page">
 
 <ion-card>
     <img src={url_default} alt="hest" />

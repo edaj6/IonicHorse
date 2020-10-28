@@ -2399,19 +2399,31 @@ var app = (function () {
     const file = "src\\pages\\Home.svelte";
 
     function create_fragment(ctx) {
-    	var ion_content, h1, t_1, p;
+    	var ion_content, p, t1, ion_card, ion_card_header, ion_card_subtitle, t3, ion_card_title, t5, ion_card_content;
 
     	const block = {
     		c: function create() {
     			ion_content = element("ion-content");
-    			h1 = element("h1");
-    			h1.textContent = "Home page";
-    			t_1 = space();
     			p = element("p");
     			p.textContent = "Testing svelte with identity server, azure functions and storage";
-    			add_location(h1, file, 15, 0, 319);
-    			add_location(p, file, 17, 0, 341);
-    			add_location(ion_content, file, 13, 0, 302);
+    			t1 = space();
+    			ion_card = element("ion-card");
+    			ion_card_header = element("ion-card-header");
+    			ion_card_subtitle = element("ion-card-subtitle");
+    			ion_card_subtitle.textContent = "Arkitetk";
+    			t3 = space();
+    			ion_card_title = element("ion-card-title");
+    			ion_card_title.textContent = "John Doe";
+    			t5 = space();
+    			ion_card_content = element("ion-card-content");
+    			ion_card_content.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
+    			add_location(p, file, 18, 2, 434);
+    			add_location(ion_card_subtitle, file, 23, 6, 554);
+    			add_location(ion_card_title, file, 24, 6, 609);
+    			add_location(ion_card_header, file, 22, 4, 529);
+    			add_location(ion_card_content, file, 26, 4, 680);
+    			add_location(ion_card, file, 20, 2, 511);
+    			add_location(ion_content, file, 17, 0, 417);
     		},
 
     		l: function claim(nodes) {
@@ -2420,9 +2432,15 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert_dev(target, ion_content, anchor);
-    			append_dev(ion_content, h1);
-    			append_dev(ion_content, t_1);
     			append_dev(ion_content, p);
+    			append_dev(ion_content, t1);
+    			append_dev(ion_content, ion_card);
+    			append_dev(ion_card, ion_card_header);
+    			append_dev(ion_card_header, ion_card_subtitle);
+    			append_dev(ion_card_header, t3);
+    			append_dev(ion_card_header, ion_card_title);
+    			append_dev(ion_card, t5);
+    			append_dev(ion_card, ion_card_content);
     		},
 
     		p: noop,
@@ -2439,6 +2457,10 @@ var app = (function () {
     	return block;
     }
 
+    let email = "none";
+
+    let password = "no";
+
     function instance($$self) {
     	
 
@@ -2447,14 +2469,17 @@ var app = (function () {
         const response = await fetch(
           `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`
         );
-        await loginUser("");
+        await loginUser({ email, password });
       });
 
     	$$self.$capture_state = () => {
     		return {};
     	};
 
-    	$$self.$inject_state = $$props => {};
+    	$$self.$inject_state = $$props => {
+    		if ('email' in $$props) email = $$props.email;
+    		if ('password' in $$props) password = $$props.password;
+    	};
 
     	return {};
     }
@@ -2729,7 +2754,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:0) {:catch e}
+    // (33:0) {:catch e}
     function create_catch_block(ctx) {
     	var div1, div0, h3, t1, h4, h4_intro, t3, p, t4_value = ctx.e + "", t4, p_intro;
 
@@ -2745,13 +2770,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 32, 6, 1038);
+    			add_location(h3, file$2, 35, 6, 1143);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 31, 4, 1011);
-    			add_location(h4, file$2, 34, 4, 1066);
-    			add_location(p, file$2, 35, 4, 1107);
+    			add_location(div0, file$2, 34, 4, 1116);
+    			add_location(h4, file$2, 37, 4, 1171);
+    			add_location(p, file$2, 38, 4, 1212);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 30, 2, 980);
+    			add_location(div1, file$2, 33, 2, 1085);
     		},
 
     		m: function mount(target, anchor) {
@@ -2795,7 +2820,7 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(30:0) {:catch e}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(33:0) {:catch e}", ctx });
     	return block;
     }
 
@@ -2869,7 +2894,7 @@ var app = (function () {
 
     // (20:2) {#each data as { firstName, lastName, birthday, url }
     function create_each_block$1(ctx) {
-    	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, t7_value = ctx.birthday + "", t7, t8;
+    	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, br0, t7, br1, t8, t9_value = ctx.birthday + "", t9, t10;
 
     	const block = {
     		c: function create() {
@@ -2884,14 +2909,20 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			ion_card_content = element("ion-card-content");
-    			t6 = text("Point denne måned: ");
-    			t7 = text(t7_value);
+    			t6 = text("Ansat siden starten af 2000, det ser rigtig godt ud.. ");
+    			br0 = element("br");
+    			t7 = text("\r\n      Point denne måned: ");
+    			br1 = element("br");
     			t8 = space();
-    			add_location(ion_card_subtitle, file$2, 22, 8, 722);
-    			add_location(ion_card_title, file$2, 23, 8, 779);
-    			add_location(ion_card_header, file$2, 21, 6, 695);
-    			add_location(ion_card_content, file$2, 26, 6, 870);
-    			add_location(ion_card, file$2, 20, 4, 677);
+    			t9 = text(t9_value);
+    			t10 = space();
+    			add_location(ion_card_subtitle, file$2, 22, 8, 739);
+    			add_location(ion_card_title, file$2, 23, 8, 796);
+    			add_location(ion_card_header, file$2, 21, 6, 712);
+    			add_location(br0, file$2, 27, 60, 967);
+    			add_location(br1, file$2, 28, 25, 999);
+    			add_location(ion_card_content, file$2, 26, 6, 887);
+    			add_location(ion_card, file$2, 20, 4, 694);
     		},
 
     		m: function mount(target, anchor) {
@@ -2906,8 +2937,12 @@ var app = (function () {
     			append_dev(ion_card, t5);
     			append_dev(ion_card, ion_card_content);
     			append_dev(ion_card_content, t6);
+    			append_dev(ion_card_content, br0);
     			append_dev(ion_card_content, t7);
-    			append_dev(ion_card, t8);
+    			append_dev(ion_card_content, br1);
+    			append_dev(ion_card_content, t8);
+    			append_dev(ion_card_content, t9);
+    			append_dev(ion_card, t10);
     		},
 
     		p: function update(changed, ctx) {
@@ -2919,8 +2954,8 @@ var app = (function () {
     				set_data_dev(t4, t4_value);
     			}
 
-    			if ((changed.$response) && t7_value !== (t7_value = ctx.birthday + "")) {
-    				set_data_dev(t7, t7_value);
+    			if ((changed.$response) && t9_value !== (t9_value = ctx.birthday + "")) {
+    				set_data_dev(t9, t9_value);
     			}
     		},
 
@@ -3000,7 +3035,8 @@ var app = (function () {
     			t_1 = space();
 
     			info.block.c();
-    			add_location(p, file$2, 14, 0, 467);
+    			add_location(p, file$2, 14, 0, 484);
+    			set_custom_element_data(ion_content, "class", "app-page");
     			add_location(ion_content, file$2, 13, 0, 452);
     		},
 
@@ -3114,58 +3150,55 @@ var app = (function () {
     const file$3 = "src\\pages\\Items.svelte";
 
     function create_fragment$3(ctx) {
-    	var ion_content, h1, t1, ion_card0, img0, t2, ion_card_header0, ion_card_subtitle0, t4, ion_card_title0, t6, ion_card_content0, t8, ion_card1, img1, t9, ion_card_header1, ion_card_subtitle1, t11, ion_card_title1, t13, ion_card_content1;
+    	var ion_content, ion_card0, img0, t0, ion_card_header0, ion_card_subtitle0, t2, ion_card_title0, t4, ion_card_content0, t6, ion_card1, img1, t7, ion_card_header1, ion_card_subtitle1, t9, ion_card_title1, t11, ion_card_content1;
 
     	const block = {
     		c: function create() {
     			ion_content = element("ion-content");
-    			h1 = element("h1");
-    			h1.textContent = "Items page";
-    			t1 = space();
     			ion_card0 = element("ion-card");
     			img0 = element("img");
-    			t2 = space();
+    			t0 = space();
     			ion_card_header0 = element("ion-card-header");
     			ion_card_subtitle0 = element("ion-card-subtitle");
     			ion_card_subtitle0.textContent = "Arkitetk";
-    			t4 = space();
+    			t2 = space();
     			ion_card_title0 = element("ion-card-title");
     			ion_card_title0.textContent = "John Doe";
-    			t6 = space();
+    			t4 = space();
     			ion_card_content0 = element("ion-card-content");
     			ion_card_content0.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
-    			t8 = space();
+    			t6 = space();
     			ion_card1 = element("ion-card");
     			img1 = element("img");
-    			t9 = space();
+    			t7 = space();
     			ion_card_header1 = element("ion-card-header");
     			ion_card_subtitle1 = element("ion-card-subtitle");
     			ion_card_subtitle1.textContent = "Hest";
-    			t11 = space();
+    			t9 = space();
     			ion_card_title1 = element("ion-card-title");
     			ion_card_title1.textContent = "Jane";
-    			t13 = space();
+    			t11 = space();
     			ion_card_content1 = element("ion-card-content");
     			ion_card_content1.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
-    			add_location(h1, file$3, 7, 0, 214);
     			attr_dev(img0, "src", url_default$1);
     			attr_dev(img0, "alt", "hest");
-    			add_location(img0, file$3, 10, 4, 253);
-    			add_location(ion_card_subtitle0, file$3, 12, 6, 320);
-    			add_location(ion_card_title0, file$3, 13, 6, 375);
-    			add_location(ion_card_header0, file$3, 11, 4, 295);
-    			add_location(ion_card_content0, file$3, 15, 4, 446);
+    			add_location(img0, file$3, 8, 4, 247);
+    			add_location(ion_card_subtitle0, file$3, 10, 6, 314);
+    			add_location(ion_card_title0, file$3, 11, 6, 369);
+    			add_location(ion_card_header0, file$3, 9, 4, 289);
+    			add_location(ion_card_content0, file$3, 13, 4, 440);
     			set_custom_element_data(ion_card0, "class", "svelte-8rpro");
-    			add_location(ion_card0, file$3, 9, 0, 237);
+    			add_location(ion_card0, file$3, 7, 0, 231);
     			attr_dev(img1, "src", url_default$1);
     			attr_dev(img1, "alt", "hest 2");
-    			add_location(img1, file$3, 22, 4, 672);
-    			add_location(ion_card_subtitle1, file$3, 24, 6, 741);
-    			add_location(ion_card_title1, file$3, 25, 6, 792);
-    			add_location(ion_card_header1, file$3, 23, 4, 716);
-    			add_location(ion_card_content1, file$3, 27, 4, 859);
+    			add_location(img1, file$3, 20, 4, 666);
+    			add_location(ion_card_subtitle1, file$3, 22, 6, 735);
+    			add_location(ion_card_title1, file$3, 23, 6, 786);
+    			add_location(ion_card_header1, file$3, 21, 4, 710);
+    			add_location(ion_card_content1, file$3, 25, 4, 853);
     			set_custom_element_data(ion_card1, "class", "svelte-8rpro");
-    			add_location(ion_card1, file$3, 21, 0, 656);
+    			add_location(ion_card1, file$3, 19, 0, 650);
+    			set_custom_element_data(ion_content, "class", "app-page");
     			add_location(ion_content, file$3, 5, 0, 197);
     		},
 
@@ -3175,26 +3208,24 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert_dev(target, ion_content, anchor);
-    			append_dev(ion_content, h1);
-    			append_dev(ion_content, t1);
     			append_dev(ion_content, ion_card0);
     			append_dev(ion_card0, img0);
-    			append_dev(ion_card0, t2);
+    			append_dev(ion_card0, t0);
     			append_dev(ion_card0, ion_card_header0);
     			append_dev(ion_card_header0, ion_card_subtitle0);
-    			append_dev(ion_card_header0, t4);
+    			append_dev(ion_card_header0, t2);
     			append_dev(ion_card_header0, ion_card_title0);
-    			append_dev(ion_card0, t6);
+    			append_dev(ion_card0, t4);
     			append_dev(ion_card0, ion_card_content0);
-    			append_dev(ion_content, t8);
+    			append_dev(ion_content, t6);
     			append_dev(ion_content, ion_card1);
     			append_dev(ion_card1, img1);
-    			append_dev(ion_card1, t9);
+    			append_dev(ion_card1, t7);
     			append_dev(ion_card1, ion_card_header1);
     			append_dev(ion_card_header1, ion_card_subtitle1);
-    			append_dev(ion_card_header1, t11);
+    			append_dev(ion_card_header1, t9);
     			append_dev(ion_card_header1, ion_card_title1);
-    			append_dev(ion_card1, t13);
+    			append_dev(ion_card1, t11);
     			append_dev(ion_card1, ion_card_content1);
     		},
 
@@ -5829,7 +5860,7 @@ var app = (function () {
 
     /* src\App.svelte generated by Svelte v3.12.1 */
 
-    // (26:2) {#if $globalStore.sidebar}
+    // (28:2) {#if $globalStore.sidebar}
     function create_if_block_1$2(ctx) {
     	var current;
 
@@ -5861,11 +5892,11 @@ var app = (function () {
     			destroy_component(sidebar, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$2.name, type: "if", source: "(26:2) {#if $globalStore.sidebar}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$2.name, type: "if", source: "(28:2) {#if $globalStore.sidebar}", ctx });
     	return block;
     }
 
-    // (29:2) {#if $globalStore.alert}
+    // (31:2) {#if $globalStore.alert}
     function create_if_block$4(ctx) {
     	var current;
 
@@ -5897,11 +5928,11 @@ var app = (function () {
     			destroy_component(alert, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$4.name, type: "if", source: "(29:2) {#if $globalStore.alert}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$4.name, type: "if", source: "(31:2) {#if $globalStore.alert}", ctx });
     	return block;
     }
 
-    // (23:0) <Router>
+    // (24:0) <Router>
     function create_default_slot(ctx) {
     	var t0, t1, t2, t3, t4, t5, t6, current;
 
@@ -6084,7 +6115,7 @@ var app = (function () {
     			destroy_component(route4, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(23:0) <Router>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(24:0) <Router>", ctx });
     	return block;
     }
 
