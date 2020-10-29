@@ -16,6 +16,10 @@ export function setUser(user) {
   userStore.set(user);
 }
 
+export function getUser() {
+  userStore.getItem();
+}
+
 export function logoutUser() {
   localStorage.clear();
   userStore.set({ user: null, jwt: null });

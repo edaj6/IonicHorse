@@ -25,30 +25,26 @@
   async function handleSubmit() {
     // add alert
     globalStore.toggleItem("alert", true, "loading data... please wait!");
-     
-     console.log("ismember" + isMember);
 
-    let user;
+     console.log("ismember " + isMember);
+
+    let isLoginSucces;
     if (isMember) {
-      user = await loginUser({ email, password });
+      isLoginSucces = await loginUser({ email, password });
     } else {
-      user = await registerUser({ email, password, username });
+      isLoginSucces = await registerUser({ email, password, username });
     }
 
-    if (user) {
-      console.log("user logged in" + user.email);
-      
+    if (isLoginSucces) {
       globalStore.toggleItem(
         "alert",
         true,
         "velkommen til, du er logget ind!"
       );
 
-      navigate("/items");
-      // add alert
+      navigate("/");
       return;
     }
-    console.log("no user");
 
     // add alert
     globalStore.toggleItem(

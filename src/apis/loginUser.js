@@ -9,17 +9,14 @@ async function loginUser({ email, password }) {
       "Email": email,
       "Password": password,
       "RememberMe": true
-    })
-    .then((response) => {
-      if (response.status === 200) {
-        setupUser(response);
-      };
-      console.log(response);
-    }, (error) => {
-      console.log("not logged in, statuscode " + error.response.status);
     });
 
-  return response;
+    if (response.status === 200) {
+      setupUser(response);
+      return true;
+    }
+
+    return false;
 }
 
 export default loginUser;
