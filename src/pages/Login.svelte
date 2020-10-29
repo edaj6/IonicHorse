@@ -42,7 +42,7 @@
         "velkommen til, du er logget ind!"
       );
 
-      navigate("/");
+      navigate("/about");
       return;
     }
 

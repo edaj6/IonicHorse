@@ -16,12 +16,8 @@
       logoutUser();
       globalStore.toggleItem('sidebar', false);
     }}>
-    logout
+    logout {$user.username.substring(0, 1)}
   </a>
 {:else}
   <a href="/login">login</a>
 {/if}
-
-<!-- on:click={() => {
-      globalStore.toggleItem('sidebar', false);
-    }} -->

@@ -2360,20 +2360,29 @@ var app = (function () {
     }
 
     function setUser(user) {
-      userStore.set(user);
+      console.log("userStore setUser()");
+      console.log(user);
+      userStore.set({ username: user.username, jwt: user.jwt });
     }
 
     function logoutUser() {
       localStorage.clear();
-      userStore.set({ user: null, jwt: null });
+      userStore.set({ username: null, jwt: null });
     }
 
     function setupUser(response) {
-      console.log(response);
+      console.log("setupUser");
+      // console.log(response);
+      // console.log(JSON.stringify(response.data));
 
-      const { jwt } = response.data.jwt;
-      const { username } = response.data.username;
+      const jwt = response.data.jwt;
+      const username = response.data.username;
       const user = { username, jwt };
+
+      // console.log(jwt);
+      // console.log(username);
+      console.log(JSON.stringify(user));
+
       setStorageUser(user);
       setUser(user);
     }
@@ -4380,12 +4389,12 @@ var app = (function () {
     			t_1 = space();
     			input = element("input");
     			attr_dev(label, "for", "username");
-    			add_location(label, file$4, 78, 8, 2043);
+    			add_location(label, file$4, 78, 8, 2048);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "id", "username");
-    			add_location(input, file$4, 79, 8, 2091);
+    			add_location(input, file$4, 79, 8, 2096);
     			attr_dev(div, "class", "form-control");
-    			add_location(div, file$4, 77, 6, 2007);
+    			add_location(div, file$4, 77, 6, 2012);
     			dispose = listen_dev(input, "input", ctx.input_input_handler);
     		},
 
@@ -4423,7 +4432,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "please fill out all form fields";
     			attr_dev(p, "class", "form-empty");
-    			add_location(p, file$4, 84, 6, 2236);
+    			add_location(p, file$4, 84, 6, 2241);
     		},
 
     		m: function mount(target, anchor) {
@@ -4451,9 +4460,9 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "click here";
     			attr_dev(button, "type", "button");
-    			add_location(button, file$4, 101, 8, 2717);
+    			add_location(button, file$4, 101, 8, 2722);
     			attr_dev(p, "class", "register-link");
-    			add_location(p, file$4, 99, 6, 2655);
+    			add_location(p, file$4, 99, 6, 2660);
     			dispose = listen_dev(button, "click", ctx.toggleMember);
     		},
 
@@ -4486,9 +4495,9 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "click here";
     			attr_dev(button, "type", "button");
-    			add_location(button, file$4, 96, 8, 2557);
+    			add_location(button, file$4, 96, 8, 2562);
     			attr_dev(p, "class", "register-link");
-    			add_location(p, file$4, 94, 6, 2495);
+    			add_location(p, file$4, 94, 6, 2500);
     			dispose = listen_dev(button, "click", ctx.toggleMember);
     		},
 
@@ -4561,30 +4570,30 @@ var app = (function () {
     			t10 = space();
     			if_block3.c();
     			attr_dev(h2, "class", "section-title");
-    			add_location(h2, file$4, 59, 2, 1373);
+    			add_location(h2, file$4, 59, 2, 1378);
     			attr_dev(label0, "for", "email");
-    			add_location(label0, file$4, 65, 6, 1591);
+    			add_location(label0, file$4, 65, 6, 1596);
     			attr_dev(input0, "type", "email");
     			attr_dev(input0, "id", "email");
-    			add_location(input0, file$4, 66, 6, 1631);
+    			add_location(input0, file$4, 66, 6, 1636);
     			attr_dev(div0, "class", "form-control");
-    			add_location(div0, file$4, 64, 4, 1557);
+    			add_location(div0, file$4, 64, 4, 1562);
     			attr_dev(label1, "for", "password");
-    			add_location(label1, file$4, 71, 6, 1796);
+    			add_location(label1, file$4, 71, 6, 1801);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "id", "password");
-    			add_location(input1, file$4, 72, 6, 1842);
+    			add_location(input1, file$4, 72, 6, 1847);
     			attr_dev(div1, "class", "form-control");
-    			add_location(div1, file$4, 70, 4, 1762);
+    			add_location(div1, file$4, 70, 4, 1767);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "btn btn-block btn-primary");
     			button.disabled = ctx.isEmpty;
     			toggle_class(button, "disabled", ctx.isEmpty);
-    			add_location(button, file$4, 86, 4, 2310);
+    			add_location(button, file$4, 86, 4, 2315);
     			attr_dev(form, "class", "login-form");
-    			add_location(form, file$4, 62, 2, 1459);
+    			add_location(form, file$4, 62, 2, 1464);
     			attr_dev(section, "class", "form");
-    			add_location(section, file$4, 58, 0, 1347);
+    			add_location(section, file$4, 58, 0, 1352);
 
     			dispose = [
     				listen_dev(input0, "input", ctx.input0_input_handler),
@@ -4743,7 +4752,7 @@ var app = (function () {
             "velkommen til, du er logget ind!"
           );
 
-          navigate("/");
+          navigate("/about");
           return;
         }
 
@@ -4868,7 +4877,7 @@ var app = (function () {
     const file$6 = "src\\components\\Navbar\\SmallNavbar.svelte";
 
     function create_fragment$8(ctx) {
-    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, dispose;
+    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, t2, ion_buttons, ion_button, ion_icon, t3, t4_value = ctx.$userStore.username + "", t4, dispose;
 
     	const block = {
     		c: function create() {
@@ -4880,18 +4889,31 @@ var app = (function () {
     			ion_toolbar = element("ion-toolbar");
     			ion_title = element("ion-title");
     			t1 = text(t1_value);
+    			t2 = space();
+    			ion_buttons = element("ion-buttons");
+    			ion_button = element("ion-button");
+    			ion_icon = element("ion-icon");
+    			t3 = space();
+    			t4 = text(t4_value);
     			attr_dev(i, "class", "fas fa-bars");
-    			add_location(i, file$6, 14, 6, 363);
+    			add_location(i, file$6, 16, 6, 411);
     			attr_dev(button, "class", "btn-sidebar-toggle");
     			attr_dev(button, "aria-label", "Sidebar Menu");
-    			add_location(button, file$6, 8, 4, 206);
-    			add_location(ion_title, file$6, 17, 6, 441);
+    			add_location(button, file$6, 10, 4, 254);
+    			add_location(ion_title, file$6, 19, 6, 489);
+    			set_custom_element_data(ion_icon, "slot", "end");
+    			set_custom_element_data(ion_icon, "name", "person-circle");
+    			add_location(ion_icon, file$6, 22, 6, 614);
+    			set_custom_element_data(ion_button, "fill", "solid");
+    			add_location(ion_button, file$6, 21, 4, 581);
+    			set_custom_element_data(ion_buttons, "slot", "primary");
+    			add_location(ion_buttons, file$6, 20, 6, 547);
     			set_custom_element_data(ion_toolbar, "mode", "ios");
-    			add_location(ion_toolbar, file$6, 16, 4, 409);
+    			add_location(ion_toolbar, file$6, 18, 4, 457);
     			attr_dev(div, "class", "nav-center");
-    			add_location(div, file$6, 6, 2, 147);
+    			add_location(div, file$6, 8, 2, 195);
     			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$6, 5, 0, 123);
+    			add_location(nav, file$6, 7, 0, 171);
     			dispose = listen_dev(button, "click", ctx.click_handler);
     		},
 
@@ -4908,11 +4930,21 @@ var app = (function () {
     			append_dev(div, ion_toolbar);
     			append_dev(ion_toolbar, ion_title);
     			append_dev(ion_title, t1);
+    			append_dev(ion_toolbar, t2);
+    			append_dev(ion_toolbar, ion_buttons);
+    			append_dev(ion_buttons, ion_button);
+    			append_dev(ion_button, ion_icon);
+    			append_dev(ion_button, t3);
+    			append_dev(ion_button, t4);
     		},
 
     		p: function update(changed, ctx) {
     			if ((changed.$globalStore) && t1_value !== (t1_value = ctx.$globalStore.selectedPage + "")) {
     				set_data_dev(t1, t1_value);
+    			}
+
+    			if ((changed.$userStore) && t4_value !== (t4_value = ctx.$userStore.username + "")) {
+    				set_data_dev(t4, t4_value);
     			}
     		},
 
@@ -4932,12 +4964,16 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	let $globalStore;
+    	let $globalStore, $userStore;
 
     	validate_store(store, 'globalStore');
     	component_subscribe($$self, store, $$value => { $globalStore = $$value; $$invalidate('$globalStore', $globalStore); });
+    	validate_store(userStore, 'userStore');
+    	component_subscribe($$self, userStore, $$value => { $userStore = $$value; $$invalidate('$userStore', $userStore); });
 
-    	let openSidebar = store.toggleItem;
+    	
+
+      let openSidebar = store.toggleItem;
 
     	const click_handler = () => {
     	        openSidebar('sidebar', true);
@@ -4950,9 +4986,15 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('openSidebar' in $$props) $$invalidate('openSidebar', openSidebar = $$props.openSidebar);
     		if ('$globalStore' in $$props) store.set($globalStore);
+    		if ('$userStore' in $$props) userStore.set($userStore);
     	};
 
-    	return { openSidebar, $globalStore, click_handler };
+    	return {
+    		openSidebar,
+    		$globalStore,
+    		$userStore,
+    		click_handler
+    	};
     }
 
     class SmallNavbar extends SvelteComponentDev {
@@ -4982,12 +5024,14 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "login";
     			attr_dev(a, "href", "/login");
-    			add_location(a, file$7, 21, 2, 417);
+    			add_location(a, file$7, 21, 2, 450);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
     		},
+
+    		p: noop,
 
     		d: function destroy(detaching) {
     			if (detaching) {
@@ -5001,12 +5045,13 @@ var app = (function () {
 
     // (11:0) {#if $user.jwt}
     function create_if_block$2(ctx) {
-    	var a, dispose;
+    	var a, t0, t1_value = ctx.$user.username.substring(0, 1) + "", t1, dispose;
 
     	const block = {
     		c: function create() {
     			a = element("a");
-    			a.textContent = "logout";
+    			t0 = text("logout ");
+    			t1 = text(t1_value);
     			attr_dev(a, "href", "/");
     			attr_dev(a, "class", "logout-btn");
     			add_location(a, file$7, 11, 2, 242);
@@ -5015,6 +5060,14 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
+    			append_dev(a, t0);
+    			append_dev(a, t1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.$user) && t1_value !== (t1_value = ctx.$user.username.substring(0, 1) + "")) {
+    				set_data_dev(t1, t1_value);
+    			}
     		},
 
     		d: function destroy(detaching) {
@@ -5056,7 +5109,9 @@ var app = (function () {
     		},
 
     		p: function update(changed, ctx) {
-    			if (current_block_type !== (current_block_type = select_block_type(changed, ctx))) {
+    			if (current_block_type === (current_block_type = select_block_type(changed, ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
     				if_block.d(1);
     				if_block = current_block_type(ctx);
     				if (if_block) {

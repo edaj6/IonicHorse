@@ -1,5 +1,7 @@
 <script>
   import globalStore from "../../stores/globalStore";
+  import userStore from "../../stores/user";
+
   let openSidebar = globalStore.toggleItem;
 </script>
 
@@ -16,10 +18,12 @@
     </button>
     <ion-toolbar mode="ios">
       <ion-title>{$globalStore.selectedPage}</ion-title>
+      <ion-buttons slot="primary">
+    <ion-button fill="solid">
+      <ion-icon slot="end" name="person-circle"></ion-icon>
+        {$userStore.username}
+    </ion-button>
+  </ion-buttons>
     </ion-toolbar>
-    <!-- logo -->
-    <!-- <a href="/" use:link class="nav-logo">
-      <img src="/assets/images/logo.svg" class="logo" alt="razors logo" />
-    </a> -->
   </div>
 </nav>

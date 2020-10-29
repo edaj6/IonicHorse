@@ -13,16 +13,14 @@ export function setStorageUser(user) {
 }
 
 export function setUser(user) {
-  userStore.set(user);
-}
-
-export function getUser() {
-  userStore.getItem();
+  console.log("userStore setUser()");
+  console.log(user);
+  userStore.set({ username: user.username, jwt: user.jwt });
 }
 
 export function logoutUser() {
   localStorage.clear();
-  userStore.set({ user: null, jwt: null });
+  userStore.set({ username: null, jwt: null });
 }
 
 export default userStore;
