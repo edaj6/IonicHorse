@@ -2235,6 +2235,8 @@ var app = (function () {
 
     var url = "https://identityloginapi.azurewebsites.net";
 
+    // export default "https://localhost:44356";
+
     const subscriber_queue = [];
     /**
      * Creates a `Readable` store that allows reading by subscription.
@@ -2377,19 +2379,20 @@ var app = (function () {
     }
 
     async function loginUser({ email, password }) {
+
       const response = await axios$1
         .post(`${url}/api/users/authenticate`, {
           "Email": email,
           "Password": password,
           "RememberMe": true
         })
-        .catch(error => console.log(error));
-
-      if (response) {
-        setupUser(response);
-      }
-
-      console.log(response);
+        .then((response) => {
+          if (response.status === 200) {
+            setupUser(response);
+          }      console.log(response);
+        }, (error) => {
+          console.log("not logged in, statuscode " + error.response.status);
+        });
 
       return response;
     }
@@ -2417,14 +2420,14 @@ var app = (function () {
     			t5 = space();
     			ion_card_content = element("ion-card-content");
     			ion_card_content.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
-    			add_location(p, file, 18, 2, 451);
-    			add_location(ion_card_subtitle, file, 23, 6, 571);
-    			add_location(ion_card_title, file, 24, 6, 626);
-    			add_location(ion_card_header, file, 22, 4, 546);
-    			add_location(ion_card_content, file, 26, 4, 697);
-    			add_location(ion_card, file, 20, 2, 528);
+    			add_location(p, file, 21, 2, 637);
+    			add_location(ion_card_subtitle, file, 26, 6, 757);
+    			add_location(ion_card_title, file, 27, 6, 812);
+    			add_location(ion_card_header, file, 25, 4, 732);
+    			add_location(ion_card_content, file, 29, 4, 883);
+    			add_location(ion_card, file, 23, 2, 714);
     			set_custom_element_data(ion_content, "class", "app-page");
-    			add_location(ion_content, file, 17, 0, 417);
+    			add_location(ion_content, file, 20, 0, 603);
     		},
 
     		l: function claim(nodes) {
@@ -2458,18 +2461,21 @@ var app = (function () {
     	return block;
     }
 
-    let email = "none";
+    let email = "none@none";
 
-    let password = "no";
+    let password = "none";
 
     function instance($$self) {
     	
 
       //wake up services
-      onMount(async () => {
+      onMount (async () => {
+        console.log("make dummy call to wake api/cosmos db, remove in production");
         const response = await fetch(
           `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`
         );
+
+        console.log("make dummy login to wake api/sqlserver, remove in production" + Date.now());
         await loginUser({ email, password });
       });
 

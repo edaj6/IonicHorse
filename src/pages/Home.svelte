@@ -3,14 +3,17 @@
   import loginUser from "../apis/loginUser";
   import Footer from "../components/Footer.svelte";
 
-  let email = "none";
-  let password = "no";
+  let email = "none@none";
+  let password = "none";
 
   //wake up services
-  onMount(async () => {
+  onMount (async () => {
+    console.log("make dummy call to wake api/cosmos db, remove in production");
     const response = await fetch(
       `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`
     );
+
+    console.log("make dummy login to wake api/sqlserver, remove in production" + Date.now());
     await loginUser({ email, password });
   });
 </script>
@@ -29,7 +32,7 @@
       Madison was named the capital of the Wisconsin Territory in 1836.
 
     </ion-card-content>
-    
+
   </ion-card>
 
 </ion-content>
