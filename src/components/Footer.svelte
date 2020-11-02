@@ -11,9 +11,8 @@
 </style>
 
 <footer class="footer">
-  <p>Russ Eby &copy; 2020</p>
+  <p>Footer &copy; 2020</p>
   <p>
-    Star Wars information provided by
-    <a href="https://swapi.dev/">The Star Wars API</a>
+    Smart foot all - information provided by us
   </p>
 </footer>

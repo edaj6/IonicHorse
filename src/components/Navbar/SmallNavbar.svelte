@@ -1,6 +1,6 @@
 <script>
   import globalStore from "../../stores/globalStore";
-  import userStore from "../../stores/user";
+  import user from "../../stores/user";
 
   let openSidebar = globalStore.toggleItem;
 </script>
@@ -19,9 +19,9 @@
     <ion-toolbar mode="ios">
       <ion-title>{$globalStore.selectedPage}</ion-title>
       <ion-buttons slot="primary">
-    <ion-button fill="solid">
-      <ion-icon slot="end" name="person-circle"></ion-icon>
-        {$userStore.username}
+    <ion-button fill="outline">
+      <ion-icon slot="end" color name="person-circle"></ion-icon>
+      {$user.username.substring(0, 1).toUpperCase()}
     </ion-button>
   </ion-buttons>
     </ion-toolbar>

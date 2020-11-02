@@ -1,5 +1,5 @@
 <script>
-//   import CartButton from "../Cart/CartButton.svelte";
+  //   import CartButton from "../Cart/CartButton.svelte";
   import { link } from "svelte-routing";
   import links from "../../constants/links";
   import LoginLink from "../LoginLink.svelte";

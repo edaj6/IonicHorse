@@ -4883,7 +4883,7 @@ var app = (function () {
     const file$6 = "src\\components\\Navbar\\SmallNavbar.svelte";
 
     function create_fragment$8(ctx) {
-    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, t2, ion_buttons, ion_button, ion_icon, t3, t4_value = ctx.$userStore.username + "", t4, dispose;
+    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, t2, ion_buttons, ion_button, ion_icon, t3, t4_value = ctx.$user.username.substring(0, 1).toUpperCase() + "", t4, dispose;
 
     	const block = {
     		c: function create() {
@@ -4902,24 +4902,25 @@ var app = (function () {
     			t3 = space();
     			t4 = text(t4_value);
     			attr_dev(i, "class", "fas fa-bars");
-    			add_location(i, file$6, 16, 6, 411);
+    			add_location(i, file$6, 16, 6, 406);
     			attr_dev(button, "class", "btn-sidebar-toggle");
     			attr_dev(button, "aria-label", "Sidebar Menu");
-    			add_location(button, file$6, 10, 4, 254);
-    			add_location(ion_title, file$6, 19, 6, 489);
+    			add_location(button, file$6, 10, 4, 249);
+    			add_location(ion_title, file$6, 19, 6, 484);
     			set_custom_element_data(ion_icon, "slot", "end");
+    			set_custom_element_data(ion_icon, "color", "");
     			set_custom_element_data(ion_icon, "name", "person-circle");
-    			add_location(ion_icon, file$6, 22, 6, 614);
-    			set_custom_element_data(ion_button, "fill", "solid");
-    			add_location(ion_button, file$6, 21, 4, 581);
+    			add_location(ion_icon, file$6, 22, 6, 611);
+    			set_custom_element_data(ion_button, "fill", "outline");
+    			add_location(ion_button, file$6, 21, 4, 576);
     			set_custom_element_data(ion_buttons, "slot", "primary");
-    			add_location(ion_buttons, file$6, 20, 6, 547);
+    			add_location(ion_buttons, file$6, 20, 6, 542);
     			set_custom_element_data(ion_toolbar, "mode", "ios");
-    			add_location(ion_toolbar, file$6, 18, 4, 457);
+    			add_location(ion_toolbar, file$6, 18, 4, 452);
     			attr_dev(div, "class", "nav-center");
-    			add_location(div, file$6, 8, 2, 195);
+    			add_location(div, file$6, 8, 2, 190);
     			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$6, 7, 0, 171);
+    			add_location(nav, file$6, 7, 0, 166);
     			dispose = listen_dev(button, "click", ctx.click_handler);
     		},
 
@@ -4949,7 +4950,7 @@ var app = (function () {
     				set_data_dev(t1, t1_value);
     			}
 
-    			if ((changed.$userStore) && t4_value !== (t4_value = ctx.$userStore.username + "")) {
+    			if ((changed.$user) && t4_value !== (t4_value = ctx.$user.username.substring(0, 1).toUpperCase() + "")) {
     				set_data_dev(t4, t4_value);
     			}
     		},
@@ -4970,12 +4971,12 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	let $globalStore, $userStore;
+    	let $globalStore, $user;
 
     	validate_store(store, 'globalStore');
     	component_subscribe($$self, store, $$value => { $globalStore = $$value; $$invalidate('$globalStore', $globalStore); });
-    	validate_store(userStore, 'userStore');
-    	component_subscribe($$self, userStore, $$value => { $userStore = $$value; $$invalidate('$userStore', $userStore); });
+    	validate_store(userStore, 'user');
+    	component_subscribe($$self, userStore, $$value => { $user = $$value; $$invalidate('$user', $user); });
 
     	
 
@@ -4992,13 +4993,13 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('openSidebar' in $$props) $$invalidate('openSidebar', openSidebar = $$props.openSidebar);
     		if ('$globalStore' in $$props) store.set($globalStore);
-    		if ('$userStore' in $$props) userStore.set($userStore);
+    		if ('$user' in $$props) userStore.set($user);
     	};
 
     	return {
     		openSidebar,
     		$globalStore,
-    		$userStore,
+    		$user,
     		click_handler
     	};
     }
@@ -5198,8 +5199,8 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(a, "href", ctx.navLink.url);
-    			add_location(a, file$8, 14, 12, 418);
-    			add_location(li, file$8, 13, 10, 400);
+    			add_location(a, file$8, 14, 12, 420);
+    			add_location(li, file$8, 13, 10, 402);
     		},
 
     		m: function mount(target, anchor) {
@@ -5255,22 +5256,22 @@ var app = (function () {
     			div0 = element("div");
     			loginlink.$$.fragment.c();
     			attr_dev(ul, "class", "nav-links");
-    			add_location(ul, file$8, 11, 6, 332);
+    			add_location(ul, file$8, 11, 6, 334);
     			attr_dev(img, "src", "/assets/images/logo.svg");
     			attr_dev(img, "class", "logo");
     			attr_dev(img, "alt", "razors logo");
-    			add_location(img, file$8, 20, 8, 604);
+    			add_location(img, file$8, 20, 8, 606);
     			attr_dev(a, "href", "/");
     			attr_dev(a, "class", "nav-logo big-logo");
-    			add_location(a, file$8, 19, 6, 547);
+    			add_location(a, file$8, 19, 6, 549);
     			attr_dev(div0, "class", "nav-aside");
-    			add_location(div0, file$8, 23, 6, 720);
+    			add_location(div0, file$8, 23, 6, 722);
     			attr_dev(div1, "class", "nav-center");
-    			add_location(div1, file$8, 9, 4, 274);
+    			add_location(div1, file$8, 9, 4, 276);
     			attr_dev(div2, "class", "nav-container");
-    			add_location(div2, file$8, 8, 2, 241);
+    			add_location(div2, file$8, 8, 2, 243);
     			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$8, 7, 0, 217);
+    			add_location(nav, file$8, 7, 0, 219);
     		},
 
     		l: function claim(nodes) {
