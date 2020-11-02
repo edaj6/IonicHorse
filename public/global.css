@@ -37,7 +37,7 @@ Global Styles
 
 ion-card{
   float: left;
-  margin: 5px; 
+  margin: 5px;
 }
 
 .app-page{
@@ -48,7 +48,7 @@ ion-card{
 /* Wide screen only */
 @media only screen and (min-width: 992px) {
   .app-page  {
-    width: 100%;    
+    width: 100%;
     border: 100px solid white;
     border-top: 0px;
     align-items: center;
@@ -402,9 +402,10 @@ Sidebar
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   height: 100%;
   z-index: 4;
+  padding-left: 70px;
 }
 .sidebar {
   width: var(--smallWidth);

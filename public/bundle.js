@@ -2394,6 +2394,10 @@ var app = (function () {
           "Email": email,
           "Password": password,
           "RememberMe": true
+        }).catch(error => {
+          //do nothing, loging failed
+          console.log("login error, " + error.response.status);
+          return false;
         });
 
         if (response.status === 200) {
@@ -2733,6 +2737,8 @@ var app = (function () {
 			opacity: ${target_opacity - (od * u)}`
         };
     }
+
+    //fetch data and cache result
 
     const cache = new Map();
 
@@ -5704,7 +5710,7 @@ var app = (function () {
     			transition_in(loginlink.$$.fragment, local);
 
     			add_render_callback(() => {
-    				if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fade, { delay: 400 }, true);
+    				if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fade, { delay: 300 }, true);
     				div1_transition.run(1);
     			});
 
@@ -5719,7 +5725,7 @@ var app = (function () {
     		o: function outro(local) {
     			transition_out(loginlink.$$.fragment, local);
 
-    			if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fade, { delay: 400 }, false);
+    			if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fade, { delay: 300 }, false);
     			div1_transition.run(0);
 
     			if (!div2_transition) div2_transition = create_bidirectional_transition(div2, fly, { x: -1000 }, false);

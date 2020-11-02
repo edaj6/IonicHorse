@@ -9,6 +9,10 @@ async function loginUser({ email, password }) {
       "Email": email,
       "Password": password,
       "RememberMe": true
+    }).catch(error => {
+      //do nothing, loging failed
+      console.log("login error, " + error.response.status)
+      return false;
     });
 
     if (response.status === 200) {

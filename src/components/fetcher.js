@@ -1,5 +1,7 @@
 import { writable } from 'svelte/store'
 
+//fetch data and cache result
+
 const cache = new Map();
 
 export function getData(url) {
