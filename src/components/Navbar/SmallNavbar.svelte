@@ -21,7 +21,9 @@
       <ion-buttons slot="primary">
     <ion-button fill="outline">
       <ion-icon slot="end" color name="person-circle"></ion-icon>
-      {$user.username.substring(0, 1).toUpperCase()}
+      {#if $user.username}
+        {$user.username.substring(0, 1).toUpperCase()}
+      {/if}
     </ion-button>
   </ion-buttons>
     </ion-toolbar>
