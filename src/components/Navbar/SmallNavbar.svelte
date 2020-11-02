@@ -1,6 +1,7 @@
 <script>
   import globalStore from "../../stores/globalStore";
   import user from "../../stores/user";
+  import LoginButton from "./../LoginButton.svelte";
 
   let openSidebar = globalStore.toggleItem;
 </script>
@@ -18,13 +19,9 @@
     </button>
     <ion-toolbar mode="ios">
       <ion-title>{$globalStore.selectedPage}</ion-title>
+
       <ion-buttons slot="primary">
-    <ion-button fill="outline">
-      <ion-icon slot="end" color name="person-circle"></ion-icon>
-      {#if $user.username}
-        {$user.username.substring(0, 1).toUpperCase()}
-      {/if}
-    </ion-button>
+      <LoginButton/>
   </ion-buttons>
     </ion-toolbar>
   </div>

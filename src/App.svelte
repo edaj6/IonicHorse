@@ -3,6 +3,7 @@
   import Home from "./pages/Home.svelte";
   import About from "./pages/About.svelte";
   import Items from "./pages/Items.svelte";
+  import User from "./pages/User.svelte";
   import Login from "./pages/Login.svelte";
   import NotFound from "./pages/NotFound.svelte";
 
@@ -35,6 +36,7 @@
       <Route path="/" component={Home} />
       <Route path="about" component={About} />
       <Route path="items" component={Items} />
+      <Route path="user" component={User} />
       <Route path="login" component={Login} />
       <Route path="*" component={NotFound} />
 

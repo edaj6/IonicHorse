@@ -8,7 +8,7 @@
 
 </script>
 
-{#if $user.jwt}
+{#if $user.username}
   <a
     href="/"
     class="logout-btn"
