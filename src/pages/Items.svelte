@@ -28,6 +28,18 @@
       Madison was named the capital of the Wisconsin Territory in 1836.
     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <img src="https://cdn.pixabay.com/photo/2020/10/31/20/23/lighthouse-5702233_1280.jpg" alt="ikke dyr" />
+    <ion-card-header>
+      <ion-card-subtitle>Wiz</ion-card-subtitle>
+      <ion-card-title>J</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+      Madison was named the capital of the Wisconsin Territory in 1836.
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
 <style>
