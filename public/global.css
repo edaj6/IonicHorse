@@ -38,6 +38,7 @@ Global Styles
 ion-card{
   float: left;
   margin: 5px;
+  max-width: 500px;
 }
 
 .app-page{
@@ -405,11 +406,13 @@ Sidebar
   width: 300px;
   height: 100%;
   z-index: 4;
-  padding-left: 70px;
+  /* border: 1px solid red; */
 }
 .sidebar {
-  width: var(--smallWidth);
+  /* width: var(--smallWidth); */
   margin: 0 auto;
+  padding-left: 70px;
+  /* border: 1px solid blue; */
 }
 .sidebar-header,
 .cart-header,

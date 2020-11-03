@@ -4,10 +4,16 @@
   import globalStore from "../../stores/globalStore";
   import { fly, fade } from "svelte/transition";
   import LoginLink from "../LoginLink.svelte";
+  import {clickOutside} from '../Helpers/clickOutside.js';
+
+	function handleClickOutside(event) {
+		globalStore.toggleItem('sidebar', false);
+  }
+
 </script>
 
-<div class="sidebar-container" transition:fly={{ x: -1000 }}>
-  <div class="sidebar" transition:fade={{ delay: 300 }}>
+<div class="sidebar-container" in:fly={{ x: -1000 }} out:fade >
+  <div class="sidebar" transition:fade={{ delay: 300 }} use:clickOutside on:click_outside={handleClickOutside}>
     <!-- header -->
     <div class="sidebar-header">
       <button

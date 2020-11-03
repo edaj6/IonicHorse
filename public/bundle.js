@@ -3193,31 +3193,31 @@ var app = (function () {
     			t7 = space();
     			ion_card_header1 = element("ion-card-header");
     			ion_card_subtitle1 = element("ion-card-subtitle");
-    			ion_card_subtitle1.textContent = "Hest";
+    			ion_card_subtitle1.textContent = "Development";
     			t9 = space();
     			ion_card_title1 = element("ion-card-title");
     			ion_card_title1.textContent = "Jane";
     			t11 = space();
     			ion_card_content1 = element("ion-card-content");
     			ion_card_content1.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
-    			attr_dev(img0, "src", url_default$1);
-    			attr_dev(img0, "alt", "hest");
+    			attr_dev(img0, "src", "https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg");
+    			attr_dev(img0, "alt", "dyr");
     			add_location(img0, file$3, 8, 4, 247);
-    			add_location(ion_card_subtitle0, file$3, 10, 6, 314);
-    			add_location(ion_card_title0, file$3, 11, 6, 369);
-    			add_location(ion_card_header0, file$3, 9, 4, 289);
-    			add_location(ion_card_content0, file$3, 13, 4, 440);
+    			add_location(ion_card_subtitle0, file$3, 10, 6, 370);
+    			add_location(ion_card_title0, file$3, 11, 6, 425);
+    			add_location(ion_card_header0, file$3, 9, 4, 345);
+    			add_location(ion_card_content0, file$3, 13, 4, 496);
     			set_custom_element_data(ion_card0, "class", "svelte-8rpro");
     			add_location(ion_card0, file$3, 7, 0, 231);
-    			attr_dev(img1, "src", url_default$1);
-    			attr_dev(img1, "alt", "hest 2");
-    			add_location(img1, file$3, 20, 4, 666);
-    			add_location(ion_card_subtitle1, file$3, 22, 6, 735);
-    			add_location(ion_card_title1, file$3, 23, 6, 786);
-    			add_location(ion_card_header1, file$3, 21, 4, 710);
-    			add_location(ion_card_content1, file$3, 25, 4, 853);
+    			attr_dev(img1, "src", "https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg");
+    			attr_dev(img1, "alt", "dyr 2");
+    			add_location(img1, file$3, 20, 4, 722);
+    			add_location(ion_card_subtitle1, file$3, 22, 6, 855);
+    			add_location(ion_card_title1, file$3, 23, 6, 913);
+    			add_location(ion_card_header1, file$3, 21, 4, 830);
+    			add_location(ion_card_content1, file$3, 25, 4, 980);
     			set_custom_element_data(ion_card1, "class", "svelte-8rpro");
-    			add_location(ion_card1, file$3, 19, 0, 650);
+    			add_location(ion_card1, file$3, 19, 0, 706);
     			set_custom_element_data(ion_content, "class", "app-page");
     			add_location(ion_content, file$3, 5, 0, 197);
     		},
@@ -3262,8 +3262,6 @@ var app = (function () {
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$3.name, type: "component", source: "", ctx });
     	return block;
     }
-
-    let url_default$1 = "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 
     class Items extends SvelteComponentDev {
     	constructor(options) {
@@ -5737,7 +5735,7 @@ var app = (function () {
     }
 
     function create_fragment$d(ctx) {
-    	var current_block_type_index, if_block, if_block_anchor, current, dispose;
+    	var current_block_type_index, if_block, t0, t1, current, dispose;
 
     	add_render_callback(ctx.onwindowresize);
 
@@ -5759,7 +5757,8 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			if_block.c();
-    			if_block_anchor = empty();
+    			t0 = space();
+    			t1 = text(ctx.screenWidth);
     			dispose = listen_dev(window, "resize", ctx.onwindowresize);
     		},
 
@@ -5769,7 +5768,8 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, t1, anchor);
     			current = true;
     		},
 
@@ -5789,7 +5789,11 @@ var app = (function () {
     					if_block.c();
     				}
     				transition_in(if_block, 1);
-    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				if_block.m(t0.parentNode, t0);
+    			}
+
+    			if (!current || changed.screenWidth) {
+    				set_data_dev(t1, ctx.screenWidth);
     			}
     		},
 
@@ -5808,7 +5812,8 @@ var app = (function () {
     			if_blocks[current_block_type_index].d(detaching);
 
     			if (detaching) {
-    				detach_dev(if_block_anchor);
+    				detach_dev(t0);
+    				detach_dev(t1);
     			}
 
     			dispose();
@@ -5856,6 +5861,26 @@ var app = (function () {
     	}
     }
 
+    /** Dispatch event on click outside of node */
+    function clickOutside(node) {
+
+      const handleClick = event => {
+        if (node && !node.contains(event.target) && !event.defaultPrevented) {
+          node.dispatchEvent(
+            new CustomEvent('click_outside', node)
+          );
+        }
+      };
+
+    	document.addEventListener('click', handleClick, true);
+
+      return {
+        destroy() {
+          document.removeEventListener('click', handleClick, true);
+        }
+    	}
+    }
+
     /* src\components\Navbar\Sidebar.svelte generated by Svelte v3.12.1 */
 
     const file$b = "src\\components\\Navbar\\Sidebar.svelte";
@@ -5866,7 +5891,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (28:6) {#each links as sideLink}
+    // (34:6) {#each links as sideLink}
     function create_each_block$3(ctx) {
     	var li, a, t_value = ctx.sideLink.text + "", t, link_action, dispose;
 
@@ -5880,8 +5905,8 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "href", ctx.sideLink.url);
-    			add_location(a, file$b, 29, 10, 888);
-    			add_location(li, file$b, 28, 8, 872);
+    			add_location(a, file$b, 35, 10, 1098);
+    			add_location(li, file$b, 34, 8, 1082);
     			dispose = listen_dev(a, "click", click_handler_1);
     		},
 
@@ -5905,12 +5930,12 @@ var app = (function () {
     			dispose();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$3.name, type: "each", source: "(28:6) {#each links as sideLink}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$3.name, type: "each", source: "(34:6) {#each links as sideLink}", ctx });
     	return block;
     }
 
     function create_fragment$e(ctx) {
-    	var div2, div1, div0, button, i, t0, img, t1, ul, t2, li, div1_transition, div2_transition, current, dispose;
+    	var div2, div1, div0, button, i, t0, img, t1, ul, t2, li, div1_transition, clickOutside_action, div2_intro, div2_outro, current, dispose;
 
     	let each_value = links;
 
@@ -5942,23 +5967,27 @@ var app = (function () {
     			li = element("li");
     			loginlink.$$.fragment.c();
     			attr_dev(i, "class", "fas fa-window-close");
-    			add_location(i, file$b, 17, 8, 583);
+    			add_location(i, file$b, 23, 8, 793);
     			attr_dev(button, "class", "btn-close");
-    			add_location(button, file$b, 12, 6, 446);
+    			add_location(button, file$b, 18, 6, 656);
     			attr_dev(div0, "class", "sidebar-header");
-    			add_location(div0, file$b, 11, 4, 410);
+    			add_location(div0, file$b, 17, 4, 620);
     			attr_dev(img, "src", "/assets/images/logo.svg");
     			attr_dev(img, "class", "logo sidebar-logo");
     			attr_dev(img, "alt", "razors logo");
-    			add_location(img, file$b, 21, 4, 675);
-    			add_location(li, file$b, 40, 6, 1193);
+    			add_location(img, file$b, 27, 4, 885);
+    			add_location(li, file$b, 46, 6, 1403);
     			attr_dev(ul, "class", "sidebar-links");
-    			add_location(ul, file$b, 26, 4, 803);
+    			add_location(ul, file$b, 32, 4, 1013);
     			attr_dev(div1, "class", "sidebar");
-    			add_location(div1, file$b, 9, 2, 329);
+    			add_location(div1, file$b, 15, 2, 484);
     			attr_dev(div2, "class", "sidebar-container");
-    			add_location(div2, file$b, 8, 0, 264);
-    			dispose = listen_dev(button, "click", ctx.click_handler);
+    			add_location(div2, file$b, 14, 0, 417);
+
+    			dispose = [
+    				listen_dev(button, "click", ctx.click_handler),
+    				listen_dev(div1, "click_outside", handleClickOutside)
+    			];
     		},
 
     		l: function claim(nodes) {
@@ -5983,6 +6012,7 @@ var app = (function () {
     			append_dev(ul, t2);
     			append_dev(ul, li);
     			mount_component(loginlink, li, null);
+    			clickOutside_action = clickOutside.call(null, div1) || {};
     			current = true;
     		},
 
@@ -6020,8 +6050,9 @@ var app = (function () {
     			});
 
     			add_render_callback(() => {
-    				if (!div2_transition) div2_transition = create_bidirectional_transition(div2, fly, { x: -1000 }, true);
-    				div2_transition.run(1);
+    				if (div2_outro) div2_outro.end(1);
+    				if (!div2_intro) div2_intro = create_in_transition(div2, fly, { x: -1000 });
+    				div2_intro.start();
     			});
 
     			current = true;
@@ -6033,8 +6064,9 @@ var app = (function () {
     			if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fade, { delay: 300 }, false);
     			div1_transition.run(0);
 
-    			if (!div2_transition) div2_transition = create_bidirectional_transition(div2, fly, { x: -1000 }, false);
-    			div2_transition.run(0);
+    			if (div2_intro) div2_intro.invalidate();
+
+    			div2_outro = create_out_transition(div2, fade, {});
 
     			current = false;
     		},
@@ -6050,14 +6082,23 @@ var app = (function () {
 
     			if (detaching) {
     				if (div1_transition) div1_transition.end();
-    				if (div2_transition) div2_transition.end();
     			}
 
-    			dispose();
+    			if (clickOutside_action && typeof clickOutside_action.destroy === 'function') clickOutside_action.destroy();
+
+    			if (detaching) {
+    				if (div2_outro) div2_outro.end();
+    			}
+
+    			run_all(dispose);
     		}
     	};
     	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$e.name, type: "component", source: "", ctx });
     	return block;
+    }
+
+    function handleClickOutside(event) {
+    		store.toggleItem('sidebar', false);
     }
 
     function instance$b($$self, $$props, $$invalidate) {

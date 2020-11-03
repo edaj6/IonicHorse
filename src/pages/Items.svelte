@@ -6,7 +6,7 @@
 <ion-content class="app-page">
 
 <ion-card>
-    <img src={url_default} alt="hest" />
+    <img src="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg" alt="dyr" />
     <ion-card-header>
       <ion-card-subtitle>Arkitetk</ion-card-subtitle>
       <ion-card-title>John Doe</ion-card-title>
@@ -18,9 +18,9 @@
   </ion-card>
 
 <ion-card>
-    <img src={url_default} alt="hest 2" />
+    <img src="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg" alt="dyr 2" />
     <ion-card-header>
-      <ion-card-subtitle>Hest</ion-card-subtitle>
+      <ion-card-subtitle>Development</ion-card-subtitle>
       <ion-card-title>Jane</ion-card-title>
     </ion-card-header>
     <ion-card-content>
