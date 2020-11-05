@@ -7,6 +7,7 @@
 
   <Card
     likes="4"
+    lastchange="200"
     img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
     <span slot="content">Først rejste jeg tilbage og så frem igen.. crazy</span>
   </Card>
@@ -22,7 +23,7 @@
   <Card
     likes="5"
     comments="10"
-    lastchange="3"
+    lastchange="8762"
     img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
     <span slot="content">
       Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,

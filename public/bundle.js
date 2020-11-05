@@ -3173,7 +3173,7 @@ var app = (function () {
     const get_content_slot_context = () => ({});
 
     function create_fragment$3(ctx) {
-    	var ion_card, img_1, t0, ion_card_content, p1, p0, t2, ion_row, ion_col0, ion_button0, ion_icon0, t3, div0, t4, t5, t6, ion_col1, ion_button1, ion_icon1, t7, div1, t8, t9, t10, ion_col2, ion_button2, ion_icon2, t11, div2, t12, t13, current;
+    	var ion_card, img_1, t0, ion_card_content, p1, p0, t2, ion_row, ion_col0, ion_button0, ion_icon0, t3, div0, t4, t5, t6, ion_col1, ion_button1, ion_icon1, t7, div1, t8, t9, t10, ion_col2, ion_button2, ion_icon2, t11, div2, t12_value = ctx.lastChangeText() + "", t12, current;
 
     	const content_slot_template = ctx.$$slots.content;
     	const content_slot = create_slot(content_slot_template, ctx, get_content_slot_context);
@@ -3215,47 +3215,49 @@ var app = (function () {
     			ion_icon2 = element("ion-icon");
     			t11 = space();
     			div2 = element("div");
-    			t12 = text(ctx.lastchange);
-    			t13 = text("h ago");
+    			t12 = text(t12_value);
     			attr_dev(img_1, "src", ctx.img);
     			attr_dev(img_1, "alt", "avatar");
-    			add_location(img_1, file$3, 23, 2, 522);
+    			add_location(img_1, file$3, 36, 2, 803);
 
     			if (!content_slot) {
-    				attr_dev(p0, "class", "missing svelte-49814w");
-    				add_location(p0, file$3, 28, 8, 624);
+    				attr_dev(p0, "class", "missing svelte-epvt9d");
+    				add_location(p0, file$3, 41, 8, 905);
     			}
 
-    			add_location(p1, file$3, 26, 4, 582);
-    			add_location(ion_card_content, file$3, 25, 2, 558);
+    			add_location(p1, file$3, 39, 4, 863);
+    			add_location(ion_card_content, file$3, 38, 2, 839);
     			set_custom_element_data(ion_icon0, "name", "thumbs-up-outline");
-    			add_location(ion_icon0, file$3, 36, 8, 802);
-    			add_location(div0, file$3, 37, 8, 849);
+    			set_custom_element_data(ion_icon0, "class", "svelte-epvt9d");
+    			add_location(ion_icon0, file$3, 49, 8, 1083);
+    			add_location(div0, file$3, 50, 8, 1130);
     			set_custom_element_data(ion_button0, "icon-start", "");
     			set_custom_element_data(ion_button0, "fill", "clear");
     			set_custom_element_data(ion_button0, "size", "small");
-    			add_location(ion_button0, file$3, 35, 6, 743);
-    			add_location(ion_col0, file$3, 34, 4, 726);
+    			add_location(ion_button0, file$3, 48, 6, 1024);
+    			add_location(ion_col0, file$3, 47, 4, 1007);
     			set_custom_element_data(ion_icon1, "name", "chatbubbles-outline");
-    			add_location(ion_icon1, file$3, 42, 8, 992);
-    			add_location(div1, file$3, 43, 8, 1041);
+    			set_custom_element_data(ion_icon1, "class", "svelte-epvt9d");
+    			add_location(ion_icon1, file$3, 55, 8, 1273);
+    			add_location(div1, file$3, 56, 8, 1322);
     			set_custom_element_data(ion_button1, "icon-start", "");
     			set_custom_element_data(ion_button1, "fill", "clear");
     			set_custom_element_data(ion_button1, "size", "small");
-    			add_location(ion_button1, file$3, 41, 6, 933);
-    			add_location(ion_col1, file$3, 40, 4, 916);
+    			add_location(ion_button1, file$3, 54, 6, 1214);
+    			add_location(ion_col1, file$3, 53, 4, 1197);
     			set_custom_element_data(ion_icon2, "name", "pulse-outline");
     			set_custom_element_data(ion_icon2, "size", "small");
-    			add_location(ion_icon2, file$3, 48, 8, 1190);
-    			add_location(div2, file$3, 49, 8, 1246);
+    			set_custom_element_data(ion_icon2, "class", "svelte-epvt9d");
+    			add_location(ion_icon2, file$3, 61, 8, 1471);
+    			add_location(div2, file$3, 62, 8, 1527);
     			set_custom_element_data(ion_button2, "icon-start", "");
     			set_custom_element_data(ion_button2, "fill", "clear");
     			set_custom_element_data(ion_button2, "size", "small");
-    			add_location(ion_button2, file$3, 47, 6, 1131);
-    			add_location(ion_col2, file$3, 46, 4, 1114);
-    			add_location(ion_row, file$3, 33, 2, 711);
-    			set_custom_element_data(ion_card, "class", "svelte-49814w");
-    			add_location(ion_card, file$3, 22, 0, 508);
+    			add_location(ion_button2, file$3, 60, 6, 1412);
+    			add_location(ion_col2, file$3, 59, 4, 1395);
+    			add_location(ion_row, file$3, 46, 2, 992);
+    			set_custom_element_data(ion_card, "class", "svelte-epvt9d");
+    			add_location(ion_card, file$3, 35, 0, 789);
     		},
 
     		l: function claim(nodes) {
@@ -3302,7 +3304,6 @@ var app = (function () {
     			append_dev(ion_button2, t11);
     			append_dev(ion_button2, div2);
     			append_dev(div2, t12);
-    			append_dev(div2, t13);
     			current = true;
     		},
 
@@ -3324,10 +3325,6 @@ var app = (function () {
 
     			if (!current || changed.comments) {
     				set_data_dev(t8, ctx.comments);
-    			}
-
-    			if (!current || changed.lastchange) {
-    				set_data_dev(t12, ctx.lastchange);
     			}
     		},
 
@@ -3355,8 +3352,17 @@ var app = (function () {
     }
 
     function instance$3($$self, $$props, $$invalidate) {
-    	let { img =
-        "https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg", likes = 0, comments = 0, lastchange = 0 } = $$props;
+    	let { img = "https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg", likes = 0, comments = 0, lastchange = 0 } = $$props;
+
+      let lastChangeText = () => {
+        if (lastchange < 24)
+          return lastchange + "h ago"
+
+        if (lastchange < (24*365))
+          return parseInt(lastchange / 24) + "d ago"
+
+        return parseInt(lastchange / 24 / 365 ) + "y ago"
+      };
 
     //   let url_default =
     //     "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
@@ -3377,7 +3383,7 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => {
-    		return { img, likes, comments, lastchange };
+    		return { img, likes, comments, lastchange, lastChangeText };
     	};
 
     	$$self.$inject_state = $$props => {
@@ -3385,6 +3391,7 @@ var app = (function () {
     		if ('likes' in $$props) $$invalidate('likes', likes = $$props.likes);
     		if ('comments' in $$props) $$invalidate('comments', comments = $$props.comments);
     		if ('lastchange' in $$props) $$invalidate('lastchange', lastchange = $$props.lastchange);
+    		if ('lastChangeText' in $$props) $$invalidate('lastChangeText', lastChangeText = $$props.lastChangeText);
     	};
 
     	return {
@@ -3392,6 +3399,7 @@ var app = (function () {
     		likes,
     		comments,
     		lastchange,
+    		lastChangeText,
     		$$slots,
     		$$scope
     	};
@@ -3441,7 +3449,7 @@ var app = (function () {
 
     const file$4 = "src\\pages\\Items.svelte";
 
-    // (11:4) <span slot="content">
+    // (12:4) <span slot="content">
     function create_content_slot_2(ctx) {
     	var span;
 
@@ -3450,7 +3458,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Først rejste jeg tilbage og så frem igen.. crazy";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 10, 4, 296);
+    			add_location(span, file$4, 11, 4, 318);
     		},
 
     		m: function mount(target, anchor) {
@@ -3463,11 +3471,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(11:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(12:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (8:2) <Card      likes="4"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
+    // (8:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
     function create_default_slot_2(ctx) {
     	const block = {
     		c: noop,
@@ -3475,20 +3483,20 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(8:2) <Card      likes=\"4\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(8:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (19:4) <span slot="content">
+    // (20:4) <span slot="content">
     function create_content_slot_1(ctx) {
     	var span;
 
     	const block = {
     		c: function create() {
     			span = element("span");
-    			span.textContent = "capital of the Wisconsin";
+    			span.textContent = "Capital of the Wisconsin";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 18, 4, 543);
+    			add_location(span, file$4, 19, 4, 565);
     		},
 
     		m: function mount(target, anchor) {
@@ -3501,11 +3509,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(19:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(20:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (14:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
+    // (15:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
     function create_default_slot_1(ctx) {
     	const block = {
     		c: noop,
@@ -3513,11 +3521,11 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(14:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(15:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (27:4) <span slot="content">
+    // (28:4) <span slot="content">
     function create_content_slot(ctx) {
     	var span;
 
@@ -3526,7 +3534,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 26, 4, 758);
+    			add_location(span, file$4, 27, 4, 783);
     		},
 
     		m: function mount(target, anchor) {
@@ -3539,11 +3547,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(27:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(28:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (22:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
+    // (23:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
     function create_default_slot(ctx) {
     	const block = {
     		c: noop,
@@ -3551,7 +3559,7 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(22:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(23:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
     	return block;
     }
 
@@ -3561,6 +3569,7 @@ var app = (function () {
     	var card0 = new Card({
     		props: {
     		likes: "4",
+    		lastchange: "200",
     		img: "https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg",
     		$$slots: {
     		default: [create_default_slot_2],
@@ -3590,7 +3599,7 @@ var app = (function () {
     		props: {
     		likes: "5",
     		comments: "10",
-    		lastchange: "3",
+    		lastchange: "8762",
     		img: "https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg",
     		$$slots: {
     		default: [create_default_slot],

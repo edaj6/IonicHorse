@@ -31,7 +31,6 @@ Global Styles
 */
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -40,12 +39,10 @@ ion-card{
   margin: 5px;
   max-width: 500px;
   flex-direction: row;
-  /* height: 500px; */
 }
 
 .app-page{
   max-height: calc(100vh - 100px);
-  /* border: 1px solid red; */
 }
 
 /* Wide screen only */
