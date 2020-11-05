@@ -5,8 +5,8 @@
   import LoginLink from "../LoginLink.svelte";
 </script>
 
-<nav class="navbar">
-  <div class="nav-container">
+<ion-header>
+  <ion-toolbar>
     <div class="nav-center">
       <!-- nav links -->
       <ul class="nav-links">
@@ -26,5 +26,15 @@
         <!-- <CartButton /> -->
       </div>
     </div>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<!-- <nav class="navbar">
+  <div class="nav-container">
+
+
+
   </div>
-</nav>
+</nav> -->

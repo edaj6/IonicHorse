@@ -55,6 +55,11 @@
     );
   }
 </script>
+<style>
+  .form{
+    border: 1px solid red;
+  }
+</style>
 
 <section class="form">
   <h2 class="section-title">

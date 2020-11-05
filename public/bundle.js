@@ -4931,7 +4931,7 @@ var app = (function () {
 
     const file$6 = "src\\pages\\Login.svelte";
 
-    // (61:25) {:else}
+    // (66:25) {:else}
     function create_else_block_1(ctx) {
     	var t;
 
@@ -4950,11 +4950,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block_1.name, type: "else", source: "(61:25) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block_1.name, type: "else", source: "(66:25) {:else}", ctx });
     	return block;
     }
 
-    // (61:4) {#if isMember}
+    // (66:4) {#if isMember}
     function create_if_block_3(ctx) {
     	var t;
 
@@ -4973,11 +4973,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_3.name, type: "if", source: "(61:4) {#if isMember}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_3.name, type: "if", source: "(66:4) {#if isMember}", ctx });
     	return block;
     }
 
-    // (76:4) {#if !isMember}
+    // (81:4) {#if !isMember}
     function create_if_block_2(ctx) {
     	var div, label, t_1, input, dispose;
 
@@ -4989,12 +4989,12 @@ var app = (function () {
     			t_1 = space();
     			input = element("input");
     			attr_dev(label, "for", "username");
-    			add_location(label, file$6, 78, 8, 2048);
+    			add_location(label, file$6, 83, 8, 2110);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "id", "username");
-    			add_location(input, file$6, 79, 8, 2096);
-    			attr_dev(div, "class", "form-control");
-    			add_location(div, file$6, 77, 6, 2012);
+    			add_location(input, file$6, 84, 8, 2158);
+    			attr_dev(div, "class", "form-control svelte-3tq7z9");
+    			add_location(div, file$6, 82, 6, 2074);
     			dispose = listen_dev(input, "input", ctx.input_input_handler);
     		},
 
@@ -5019,11 +5019,11 @@ var app = (function () {
     			dispose();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2.name, type: "if", source: "(76:4) {#if !isMember}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2.name, type: "if", source: "(81:4) {#if !isMember}", ctx });
     	return block;
     }
 
-    // (84:4) {#if isEmpty}
+    // (89:4) {#if isEmpty}
     function create_if_block_1$1(ctx) {
     	var p;
 
@@ -5031,8 +5031,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "please fill out all form fields";
-    			attr_dev(p, "class", "form-empty");
-    			add_location(p, file$6, 84, 6, 2241);
+    			attr_dev(p, "class", "form-empty svelte-3tq7z9");
+    			add_location(p, file$6, 89, 6, 2303);
     		},
 
     		m: function mount(target, anchor) {
@@ -5045,11 +5045,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$1.name, type: "if", source: "(84:4) {#if isEmpty}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$1.name, type: "if", source: "(89:4) {#if isEmpty}", ctx });
     	return block;
     }
 
-    // (99:4) {:else}
+    // (104:4) {:else}
     function create_else_block$2(ctx) {
     	var p, t, button, dispose;
 
@@ -5060,9 +5060,9 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "click here";
     			attr_dev(button, "type", "button");
-    			add_location(button, file$6, 101, 8, 2722);
+    			add_location(button, file$6, 106, 8, 2784);
     			attr_dev(p, "class", "register-link");
-    			add_location(p, file$6, 99, 6, 2660);
+    			add_location(p, file$6, 104, 6, 2722);
     			dispose = listen_dev(button, "click", ctx.toggleMember);
     		},
 
@@ -5080,11 +5080,11 @@ var app = (function () {
     			dispose();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$2.name, type: "else", source: "(99:4) {:else}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block$2.name, type: "else", source: "(104:4) {:else}", ctx });
     	return block;
     }
 
-    // (94:4) {#if isMember}
+    // (99:4) {#if isMember}
     function create_if_block$2(ctx) {
     	var p, t, button, dispose;
 
@@ -5095,9 +5095,9 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "click here";
     			attr_dev(button, "type", "button");
-    			add_location(button, file$6, 96, 8, 2562);
+    			add_location(button, file$6, 101, 8, 2624);
     			attr_dev(p, "class", "register-link");
-    			add_location(p, file$6, 94, 6, 2500);
+    			add_location(p, file$6, 99, 6, 2562);
     			dispose = listen_dev(button, "click", ctx.toggleMember);
     		},
 
@@ -5115,7 +5115,7 @@ var app = (function () {
     			dispose();
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$2.name, type: "if", source: "(94:4) {#if isMember}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$2.name, type: "if", source: "(99:4) {#if isMember}", ctx });
     	return block;
     }
 
@@ -5170,30 +5170,30 @@ var app = (function () {
     			t10 = space();
     			if_block3.c();
     			attr_dev(h2, "class", "section-title");
-    			add_location(h2, file$6, 59, 2, 1378);
+    			add_location(h2, file$6, 64, 2, 1440);
     			attr_dev(label0, "for", "email");
-    			add_location(label0, file$6, 65, 6, 1596);
+    			add_location(label0, file$6, 70, 6, 1658);
     			attr_dev(input0, "type", "email");
     			attr_dev(input0, "id", "email");
-    			add_location(input0, file$6, 66, 6, 1636);
-    			attr_dev(div0, "class", "form-control");
-    			add_location(div0, file$6, 64, 4, 1562);
+    			add_location(input0, file$6, 71, 6, 1698);
+    			attr_dev(div0, "class", "form-control svelte-3tq7z9");
+    			add_location(div0, file$6, 69, 4, 1624);
     			attr_dev(label1, "for", "password");
-    			add_location(label1, file$6, 71, 6, 1801);
+    			add_location(label1, file$6, 76, 6, 1863);
     			attr_dev(input1, "type", "password");
     			attr_dev(input1, "id", "password");
-    			add_location(input1, file$6, 72, 6, 1847);
-    			attr_dev(div1, "class", "form-control");
-    			add_location(div1, file$6, 70, 4, 1767);
+    			add_location(input1, file$6, 77, 6, 1909);
+    			attr_dev(div1, "class", "form-control svelte-3tq7z9");
+    			add_location(div1, file$6, 75, 4, 1829);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "btn btn-block btn-primary");
     			button.disabled = ctx.isEmpty;
     			toggle_class(button, "disabled", ctx.isEmpty);
-    			add_location(button, file$6, 86, 4, 2315);
-    			attr_dev(form, "class", "login-form");
-    			add_location(form, file$6, 62, 2, 1464);
-    			attr_dev(section, "class", "form");
-    			add_location(section, file$6, 58, 0, 1352);
+    			add_location(button, file$6, 91, 4, 2377);
+    			attr_dev(form, "class", "login-form svelte-3tq7z9");
+    			add_location(form, file$6, 67, 2, 1526);
+    			attr_dev(section, "class", "form svelte-3tq7z9");
+    			add_location(section, file$6, 63, 0, 1414);
 
     			dispose = [
     				listen_dev(input0, "input", ctx.input0_input_handler),
@@ -5615,37 +5615,37 @@ var app = (function () {
     const file$9 = "src\\components\\Navbar\\SmallNavbar.svelte";
 
     function create_fragment$b(ctx) {
-    	var nav, div, button, i, t0, ion_toolbar, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, t2, ion_buttons, current, dispose;
+    	var ion_header, ion_toolbar, div, button, i, t0, ion_title, t1_value = ctx.$globalStore.selectedPage + "", t1, t2, ion_buttons, current, dispose;
 
     	var loginbutton = new LoginButton({ $$inline: true });
 
     	const block = {
     		c: function create() {
-    			nav = element("nav");
+    			ion_header = element("ion-header");
+    			ion_toolbar = element("ion-toolbar");
     			div = element("div");
     			button = element("button");
     			i = element("i");
     			t0 = space();
-    			ion_toolbar = element("ion-toolbar");
     			ion_title = element("ion-title");
     			t1 = text(t1_value);
     			t2 = space();
     			ion_buttons = element("ion-buttons");
     			loginbutton.$$.fragment.c();
     			attr_dev(i, "class", "fas fa-bars");
-    			add_location(i, file$9, 17, 6, 460);
+    			add_location(i, file$9, 23, 8, 571);
     			attr_dev(button, "class", "btn-sidebar-toggle");
     			attr_dev(button, "aria-label", "Sidebar Menu");
-    			add_location(button, file$9, 11, 4, 303);
-    			add_location(ion_title, file$9, 20, 6, 538);
+    			add_location(button, file$9, 17, 6, 402);
+    			set_custom_element_data(ion_title, "class", "svelte-26ewlz");
+    			add_location(ion_title, file$9, 25, 6, 621);
     			set_custom_element_data(ion_buttons, "slot", "primary");
-    			add_location(ion_buttons, file$9, 22, 6, 598);
-    			set_custom_element_data(ion_toolbar, "mode", "ios");
-    			add_location(ion_toolbar, file$9, 19, 4, 506);
+    			add_location(ion_buttons, file$9, 27, 6, 681);
     			attr_dev(div, "class", "nav-center");
-    			add_location(div, file$9, 9, 2, 244);
-    			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$9, 8, 0, 220);
+    			add_location(div, file$9, 15, 4, 339);
+    			set_custom_element_data(ion_toolbar, "mode", "ios");
+    			add_location(ion_toolbar, file$9, 14, 2, 309);
+    			add_location(ion_header, file$9, 13, 0, 293);
     			dispose = listen_dev(button, "click", ctx.click_handler);
     		},
 
@@ -5654,16 +5654,16 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, nav, anchor);
-    			append_dev(nav, div);
+    			insert_dev(target, ion_header, anchor);
+    			append_dev(ion_header, ion_toolbar);
+    			append_dev(ion_toolbar, div);
     			append_dev(div, button);
     			append_dev(button, i);
     			append_dev(div, t0);
-    			append_dev(div, ion_toolbar);
-    			append_dev(ion_toolbar, ion_title);
+    			append_dev(div, ion_title);
     			append_dev(ion_title, t1);
-    			append_dev(ion_toolbar, t2);
-    			append_dev(ion_toolbar, ion_buttons);
+    			append_dev(div, t2);
+    			append_dev(div, ion_buttons);
     			mount_component(loginbutton, ion_buttons, null);
     			current = true;
     		},
@@ -5688,7 +5688,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(nav);
+    				detach_dev(ion_header);
     			}
 
     			destroy_component(loginbutton);
@@ -5711,8 +5711,8 @@ var app = (function () {
       let openSidebar = store.toggleItem;
 
     	const click_handler = () => {
-    	        openSidebar('sidebar', true);
-    	      };
+    	          openSidebar('sidebar', true);
+    	        };
 
     	$$self.$capture_state = () => {
     		return {};
@@ -5921,8 +5921,8 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(a, "href", ctx.navLink.url);
-    			add_location(a, file$b, 14, 12, 420);
-    			add_location(li, file$b, 13, 10, 402);
+    			add_location(a, file$b, 14, 12, 398);
+    			add_location(li, file$b, 13, 10, 380);
     		},
 
     		m: function mount(target, anchor) {
@@ -5948,7 +5948,7 @@ var app = (function () {
     }
 
     function create_fragment$d(ctx) {
-    	var nav, div2, div1, ul, t0, a, img, link_action, t1, div0, current;
+    	var ion_header, ion_toolbar, div1, ul, t0, a, img, link_action, t1, div0, current;
 
     	let each_value = links;
 
@@ -5962,8 +5962,8 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			nav = element("nav");
-    			div2 = element("div");
+    			ion_header = element("ion-header");
+    			ion_toolbar = element("ion-toolbar");
     			div1 = element("div");
     			ul = element("ul");
 
@@ -5978,22 +5978,20 @@ var app = (function () {
     			div0 = element("div");
     			loginlink.$$.fragment.c();
     			attr_dev(ul, "class", "nav-links");
-    			add_location(ul, file$b, 11, 6, 334);
+    			add_location(ul, file$b, 11, 6, 312);
     			attr_dev(img, "src", "/assets/images/logo.svg");
     			attr_dev(img, "class", "logo");
     			attr_dev(img, "alt", "razors logo");
-    			add_location(img, file$b, 20, 8, 606);
+    			add_location(img, file$b, 20, 8, 584);
     			attr_dev(a, "href", "/");
     			attr_dev(a, "class", "nav-logo big-logo");
-    			add_location(a, file$b, 19, 6, 549);
+    			add_location(a, file$b, 19, 6, 527);
     			attr_dev(div0, "class", "nav-aside");
-    			add_location(div0, file$b, 23, 6, 722);
+    			add_location(div0, file$b, 23, 6, 700);
     			attr_dev(div1, "class", "nav-center");
-    			add_location(div1, file$b, 9, 4, 276);
-    			attr_dev(div2, "class", "nav-container");
-    			add_location(div2, file$b, 8, 2, 243);
-    			attr_dev(nav, "class", "navbar");
-    			add_location(nav, file$b, 7, 0, 219);
+    			add_location(div1, file$b, 9, 4, 254);
+    			add_location(ion_toolbar, file$b, 8, 2, 235);
+    			add_location(ion_header, file$b, 7, 0, 219);
     		},
 
     		l: function claim(nodes) {
@@ -6001,9 +5999,9 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, nav, anchor);
-    			append_dev(nav, div2);
-    			append_dev(div2, div1);
+    			insert_dev(target, ion_header, anchor);
+    			append_dev(ion_header, ion_toolbar);
+    			append_dev(ion_toolbar, div1);
     			append_dev(div1, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -6058,7 +6056,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(nav);
+    				detach_dev(ion_header);
     			}
 
     			destroy_each(each_blocks, detaching);
