@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import loginUser from "../apis/loginUser";
-  import Footer from "../components/Footer.svelte";
 
   let email = "none@none";
   let password = "none";
@@ -18,7 +17,7 @@
   });
 </script>
 
-<ion-content class="app-page">
+<ion-content>
   <p>Testing svelte with identity server, azure functions and storage</p>
 
   <ion-card>
