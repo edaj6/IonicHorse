@@ -6768,7 +6768,7 @@ var app = (function () {
 
     const file$f = "src\\App.svelte";
 
-    // (30:2) {#if $globalStore.sidebar}
+    // (32:2) {#if $globalStore.sidebar}
     function create_if_block_1$2(ctx) {
     	var current;
 
@@ -6800,11 +6800,11 @@ var app = (function () {
     			destroy_component(sidebar, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$2.name, type: "if", source: "(30:2) {#if $globalStore.sidebar}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$2.name, type: "if", source: "(32:2) {#if $globalStore.sidebar}", ctx });
     	return block;
     }
 
-    // (33:2) {#if $globalStore.alert}
+    // (35:2) {#if $globalStore.alert}
     function create_if_block$6(ctx) {
     	var current;
 
@@ -6836,11 +6836,11 @@ var app = (function () {
     			destroy_component(alert, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$6.name, type: "if", source: "(33:2) {#if $globalStore.alert}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$6.name, type: "if", source: "(35:2) {#if $globalStore.alert}", ctx });
     	return block;
     }
 
-    // (25:0) <Router>
+    // (27:0) <Router>
     function create_default_slot$1(ctx) {
     	var ion_app, t0, t1, t2, t3, t4, t5, t6, t7, t8, current;
 
@@ -6904,7 +6904,7 @@ var app = (function () {
     			route5.$$.fragment.c();
     			t8 = space();
     			footer.$$.fragment.c();
-    			add_location(ion_app, file$f, 25, 0, 723);
+    			add_location(ion_app, file$f, 27, 0, 727);
     		},
 
     		m: function mount(target, anchor) {
@@ -7026,7 +7026,7 @@ var app = (function () {
     			destroy_component(footer);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(25:0) <Router>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$1.name, type: "slot", source: "(27:0) <Router>", ctx });
     	return block;
     }
 
@@ -7112,6 +7112,10 @@ var app = (function () {
     		name: 'world'
     	}
     });
+
+    if ('serviceWorker' in navigator) {
+    	navigator.serviceWorker.register('/service-worker.js');
+      }
 
     return app;
 

@@ -20,6 +20,8 @@
 
   // global store
   import globalStore from "./stores/globalStore";
+
+
 </script>
 
 <Router>
