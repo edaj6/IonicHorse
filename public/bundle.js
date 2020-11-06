@@ -7117,10 +7117,24 @@ var app = (function () {
     // 	navigator.serviceWorker.register('/service-worker.js')
     //   }
 
-    if ('serviceWorker' in navigator) {
-    	window.addEventListener('load', () => {
-    	  navigator.serviceWorker.register('/service-worker.js');
+    //from webdev
+    // if ('serviceWorker' in navigator) {
+    // 	window.addEventListener('load', () => {
+    // 	  navigator.serviceWorker.register('/service-worker.js');
+    // 	});
+    //   }
+
+    //from mozilla
+      if ('serviceWorker' in navigator) {
+    	// Register a service worker hosted at the root of the
+    	// site using the default scope.
+    	navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    	  console.log('Service worker registration succeeded:', registration);
+    	}, /*catch*/ function(error) {
+    	  console.log('Service worker registration failed:', error);
     	});
+      } else {
+    	console.log('Service workers are not supported.');
       }
 
     return app;
