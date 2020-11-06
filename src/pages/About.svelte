@@ -14,6 +14,12 @@
 <ion-content class="app-page">
 <p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
 
+<ion-content>
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+</ion-content>
+
 {#await $response}
   <Skeleton repeat={8} />
 {:then data}

@@ -2773,7 +2773,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (33:0) {:catch e}
+    // (39:0) {:catch e}
     function create_catch_block(ctx) {
     	var div1, div0, h3, t1, h4, h4_intro, t3, p, t4_value = ctx.e + "", t4, p_intro;
 
@@ -2789,13 +2789,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 35, 6, 1143);
+    			add_location(h3, file$2, 41, 6, 1281);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 34, 4, 1116);
-    			add_location(h4, file$2, 37, 4, 1171);
-    			add_location(p, file$2, 38, 4, 1212);
+    			add_location(div0, file$2, 40, 4, 1254);
+    			add_location(h4, file$2, 43, 4, 1309);
+    			add_location(p, file$2, 44, 4, 1350);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 33, 2, 1085);
+    			add_location(div1, file$2, 39, 2, 1223);
     		},
 
     		m: function mount(target, anchor) {
@@ -2839,11 +2839,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(33:0) {:catch e}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(39:0) {:catch e}", ctx });
     	return block;
     }
 
-    // (19:0) {:then data}
+    // (25:0) {:then data}
     function create_then_block(ctx) {
     	var each_1_anchor;
 
@@ -2907,11 +2907,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(19:0) {:then data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(25:0) {:then data}", ctx });
     	return block;
     }
 
-    // (20:2) {#each data as { firstName, lastName, birthday, url }
+    // (26:2) {#each data as { firstName, lastName, birthday, url }
     function create_each_block$1(ctx) {
     	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, br0, t7, br1, t8, t9_value = ctx.birthday + "", t9, t10;
 
@@ -2935,13 +2935,13 @@ var app = (function () {
     			t8 = space();
     			t9 = text(t9_value);
     			t10 = space();
-    			add_location(ion_card_subtitle, file$2, 22, 8, 739);
-    			add_location(ion_card_title, file$2, 23, 8, 796);
-    			add_location(ion_card_header, file$2, 21, 6, 712);
-    			add_location(br0, file$2, 27, 60, 967);
-    			add_location(br1, file$2, 28, 25, 999);
-    			add_location(ion_card_content, file$2, 26, 6, 887);
-    			add_location(ion_card, file$2, 20, 4, 694);
+    			add_location(ion_card_subtitle, file$2, 28, 8, 877);
+    			add_location(ion_card_title, file$2, 29, 8, 934);
+    			add_location(ion_card_header, file$2, 27, 6, 850);
+    			add_location(br0, file$2, 33, 60, 1105);
+    			add_location(br1, file$2, 34, 25, 1137);
+    			add_location(ion_card_content, file$2, 32, 6, 1025);
+    			add_location(ion_card, file$2, 26, 4, 832);
     		},
 
     		m: function mount(target, anchor) {
@@ -2984,11 +2984,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(20:2) {#each data as { firstName, lastName, birthday, url }", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(26:2) {#each data as { firstName, lastName, birthday, url }", ctx });
     	return block;
     }
 
-    // (17:18)     <Skeleton repeat={8}
+    // (23:18)     <Skeleton repeat={8}
     function create_pending_block(ctx) {
     	var current;
 
@@ -3025,12 +3025,12 @@ var app = (function () {
     			destroy_component(skeleton, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(17:18)     <Skeleton repeat={8}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(23:18)     <Skeleton repeat={8}", ctx });
     	return block;
     }
 
     function create_fragment$2(ctx) {
-    	var ion_content, p, t_1, promise, current;
+    	var ion_content1, p, t1, ion_content0, ion_refresher, ion_refresher_content, t2, promise, current;
 
     	let info = {
     		ctx,
@@ -3048,15 +3048,23 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			ion_content = element("ion-content");
+    			ion_content1 = element("ion-content");
     			p = element("p");
     			p.textContent = "Udviklere på dette projekt (data fra dotnet azure function/cosmos db)";
-    			t_1 = space();
+    			t1 = space();
+    			ion_content0 = element("ion-content");
+    			ion_refresher = element("ion-refresher");
+    			ion_refresher_content = element("ion-refresher-content");
+    			t2 = space();
 
     			info.block.c();
     			add_location(p, file$2, 14, 0, 484);
-    			set_custom_element_data(ion_content, "class", "app-page");
-    			add_location(ion_content, file$2, 13, 0, 452);
+    			add_location(ion_refresher_content, file$2, 18, 4, 615);
+    			set_custom_element_data(ion_refresher, "slot", "fixed");
+    			add_location(ion_refresher, file$2, 17, 2, 581);
+    			add_location(ion_content0, file$2, 16, 0, 564);
+    			set_custom_element_data(ion_content1, "class", "app-page");
+    			add_location(ion_content1, file$2, 13, 0, 452);
     		},
 
     		l: function claim(nodes) {
@@ -3064,12 +3072,16 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, ion_content, anchor);
-    			append_dev(ion_content, p);
-    			append_dev(ion_content, t_1);
+    			insert_dev(target, ion_content1, anchor);
+    			append_dev(ion_content1, p);
+    			append_dev(ion_content1, t1);
+    			append_dev(ion_content1, ion_content0);
+    			append_dev(ion_content0, ion_refresher);
+    			append_dev(ion_refresher, ion_refresher_content);
+    			append_dev(ion_content1, t2);
 
-    			info.block.m(ion_content, info.anchor = null);
-    			info.mount = () => ion_content;
+    			info.block.m(ion_content1, info.anchor = null);
+    			info.mount = () => ion_content1;
     			info.anchor = null;
 
     			current = true;
@@ -3101,7 +3113,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(ion_content);
+    				detach_dev(ion_content1);
     			}
 
     			info.block.d();
@@ -3448,7 +3460,7 @@ var app = (function () {
 
     const file$4 = "src\\pages\\Items.svelte";
 
-    // (12:4) <span slot="content">
+    // (17:4) <span slot="content">
     function create_content_slot_2(ctx) {
     	var span;
 
@@ -3457,7 +3469,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Først rejste jeg tilbage og så frem igen.. crazy";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 11, 4, 318);
+    			add_location(span, file$4, 16, 4, 475);
     		},
 
     		m: function mount(target, anchor) {
@@ -3470,11 +3482,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(12:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(17:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (8:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
+    // (13:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
     function create_default_slot_2(ctx) {
     	const block = {
     		c: noop,
@@ -3482,11 +3494,11 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(8:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(13:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (20:4) <span slot="content">
+    // (25:4) <span slot="content">
     function create_content_slot_1(ctx) {
     	var span;
 
@@ -3495,7 +3507,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Capital of the Wisconsin";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 19, 4, 565);
+    			add_location(span, file$4, 24, 4, 722);
     		},
 
     		m: function mount(target, anchor) {
@@ -3508,11 +3520,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(20:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(25:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (15:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
+    // (20:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
     function create_default_slot_1(ctx) {
     	const block = {
     		c: noop,
@@ -3520,11 +3532,11 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(15:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(20:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (28:4) <span slot="content">
+    // (33:4) <span slot="content">
     function create_content_slot(ctx) {
     	var span;
 
@@ -3533,7 +3545,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 27, 4, 783);
+    			add_location(span, file$4, 32, 4, 940);
     		},
 
     		m: function mount(target, anchor) {
@@ -3546,11 +3558,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(28:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(33:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (23:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
+    // (28:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
     function create_default_slot(ctx) {
     	const block = {
     		c: noop,
@@ -3558,12 +3570,12 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(23:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(28:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
     	return block;
     }
 
     function create_fragment$4(ctx) {
-    	var ion_content, t0, t1, current;
+    	var ion_content, ion_refresher, ion_refresher_content, t0, t1, t2, current;
 
     	var card0 = new Card({
     		props: {
@@ -3612,11 +3624,20 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			ion_content = element("ion-content");
-    			card0.$$.fragment.c();
+    			ion_refresher = element("ion-refresher");
+    			ion_refresher_content = element("ion-refresher-content");
     			t0 = space();
-    			card1.$$.fragment.c();
+    			card0.$$.fragment.c();
     			t1 = space();
+    			card1.$$.fragment.c();
+    			t2 = space();
     			card2.$$.fragment.c();
+    			add_location(ion_refresher_content, file$4, 8, 4, 265);
+    			set_custom_element_data(ion_refresher, "slot", "fixed");
+    			set_custom_element_data(ion_refresher, "pull-factor", "0.5");
+    			set_custom_element_data(ion_refresher, "pull-min", "100");
+    			set_custom_element_data(ion_refresher, "pull-max", "200");
+    			add_location(ion_refresher, file$4, 7, 2, 183);
     			set_custom_element_data(ion_content, "class", "app-page");
     			add_location(ion_content, file$4, 5, 0, 147);
     		},
@@ -3627,10 +3648,13 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert_dev(target, ion_content, anchor);
-    			mount_component(card0, ion_content, null);
+    			append_dev(ion_content, ion_refresher);
+    			append_dev(ion_refresher, ion_refresher_content);
     			append_dev(ion_content, t0);
-    			mount_component(card1, ion_content, null);
+    			mount_component(card0, ion_content, null);
     			append_dev(ion_content, t1);
+    			mount_component(card1, ion_content, null);
+    			append_dev(ion_content, t2);
     			mount_component(card2, ion_content, null);
     			current = true;
     		},

@@ -5,6 +5,10 @@
 
 <ion-content class="app-page">
 
+  <ion-refresher slot="fixed">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <Card
     likes="4"
     lastchange="200"
