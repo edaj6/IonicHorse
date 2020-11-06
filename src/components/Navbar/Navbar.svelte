@@ -20,4 +20,3 @@
 {:else}
   <SmallNavbar />
 {/if}
-{screenWidth}
