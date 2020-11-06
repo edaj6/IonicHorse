@@ -7113,18 +7113,7 @@ var app = (function () {
     	}
     });
 
-    // if ('serviceWorker' in navigator) {
-    // 	navigator.serviceWorker.register('/service-worker.js')
-    //   }
-
-    //from webdev
-    // if ('serviceWorker' in navigator) {
-    // 	window.addEventListener('load', () => {
-    // 	  navigator.serviceWorker.register('/service-worker.js');
-    // 	});
-    //   }
-
-    //from mozilla
+    //register serviceworker, from mozilla
       if ('serviceWorker' in navigator) {
     	// Register a service worker hosted at the root of the
     	// site using the default scope.
