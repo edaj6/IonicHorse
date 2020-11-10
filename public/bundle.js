@@ -2792,13 +2792,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 57, 8, 1615);
+    			add_location(h3, file$2, 57, 8, 1624);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 56, 6, 1586);
-    			add_location(h4, file$2, 59, 6, 1647);
-    			add_location(p, file$2, 60, 6, 1690);
+    			add_location(div0, file$2, 56, 6, 1595);
+    			add_location(h4, file$2, 59, 6, 1656);
+    			add_location(p, file$2, 60, 6, 1699);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 55, 4, 1553);
+    			add_location(div1, file$2, 55, 4, 1562);
     		},
 
     		m: function mount(target, anchor) {
@@ -2938,13 +2938,13 @@ var app = (function () {
     			t8 = space();
     			t9 = text(t9_value);
     			t10 = space();
-    			add_location(ion_card_subtitle, file$2, 41, 10, 1147);
-    			add_location(ion_card_title, file$2, 42, 10, 1206);
-    			add_location(ion_card_header, file$2, 40, 8, 1118);
-    			add_location(br0, file$2, 47, 10, 1396);
-    			add_location(br1, file$2, 49, 10, 1444);
-    			add_location(ion_card_content, file$2, 45, 8, 1301);
-    			add_location(ion_card, file$2, 39, 6, 1098);
+    			add_location(ion_card_subtitle, file$2, 41, 10, 1156);
+    			add_location(ion_card_title, file$2, 42, 10, 1215);
+    			add_location(ion_card_header, file$2, 40, 8, 1127);
+    			add_location(br0, file$2, 47, 10, 1405);
+    			add_location(br1, file$2, 49, 10, 1453);
+    			add_location(ion_card_content, file$2, 45, 8, 1310);
+    			add_location(ion_card, file$2, 39, 6, 1107);
     		},
 
     		m: function mount(target, anchor) {
@@ -3060,12 +3060,12 @@ var app = (function () {
     			t2 = space();
 
     			info.block.c();
-    			add_location(ion_refresher_content, file$2, 30, 4, 827);
+    			add_location(ion_refresher_content, file$2, 30, 4, 836);
     			set_custom_element_data(ion_refresher, "slot", "fixed");
-    			add_location(ion_refresher, file$2, 29, 2, 767);
-    			add_location(p, file$2, 33, 2, 878);
-    			add_location(ion_content, file$2, 27, 0, 748);
-    			dispose = listen_dev(ion_refresher, "ionRefresh", ctx.doRefresh);
+    			add_location(ion_refresher, file$2, 29, 2, 776);
+    			add_location(p, file$2, 33, 2, 887);
+    			add_location(ion_content, file$2, 27, 0, 757);
+    			dispose = listen_dev(ion_refresher, "ionRefresh", doRefresh);
     		},
 
     		l: function claim(nodes) {
@@ -3130,29 +3130,27 @@ var app = (function () {
     let url_default =
         "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 
-    function instance$2($$self, $$props, $$invalidate) {
-    	let $response, $$unsubscribe_response = noop, $$subscribe_response = () => ($$unsubscribe_response(), $$unsubscribe_response = subscribe(response, $$value => { $response = $$value; $$invalidate('$response', $response); }), response);
+    function doRefresh(event) {
+      console.log("Do refresh");
 
-    	$$self.$$.on_destroy.push(() => $$unsubscribe_response());
+      // response = getData(
+      //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
+      // );
+
+      setTimeout(() => {
+        console.log("Async operation has ended");
+        event.target.complete();
+      }, 2000);
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let $response;
 
     	
 
       let response = getData(
         "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-      ); $$subscribe_response();
-
-      function doRefresh(event) {
-        console.log("Do refresh");
-
-        $$subscribe_response($$invalidate('response', response = getData(
-          "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-        )));
-
-        setTimeout(() => {
-          console.log("Async operation has ended");
-          event.target.complete();
-        }, 2000);
-      }
+      ); validate_store(response, 'response'); component_subscribe($$self, response, $$value => { $response = $$value; $$invalidate('$response', $response); });
 
       let { title = "About page" } = $$props;
 
@@ -3170,13 +3168,13 @@ var app = (function () {
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ('response' in $$props) $$subscribe_response($$invalidate('response', response = $$props.response));
+    		if ('response' in $$props) $$invalidate('response', response = $$props.response);
     		if ('title' in $$props) $$invalidate('title', title = $$props.title);
     		if ('url_default' in $$props) url_default = $$props.url_default;
     		if ('$response' in $$props) response.set($response);
     	};
 
-    	return { response, doRefresh, title, $response };
+    	return { response, title, $response };
     }
 
     class About extends SvelteComponentDev {
@@ -3479,7 +3477,7 @@ var app = (function () {
 
     const file$4 = "src\\pages\\Items.svelte";
 
-    // (25:4) <span slot="content">
+    // (27:4) <span slot="content">
     function create_content_slot_2(ctx) {
     	var span;
 
@@ -3488,7 +3486,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Først rejste jeg tilbage og så frem igen.. crazy";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 24, 4, 632);
+    			add_location(span, file$4, 26, 4, 697);
     		},
 
     		m: function mount(target, anchor) {
@@ -3501,11 +3499,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(25:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_2.name, type: "slot", source: "(27:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (21:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
+    // (23:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
     function create_default_slot_2(ctx) {
     	const block = {
     		c: noop,
@@ -3513,11 +3511,11 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(21:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(23:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (33:4) <span slot="content">
+    // (35:4) <span slot="content">
     function create_content_slot_1(ctx) {
     	var span;
 
@@ -3526,7 +3524,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Capital of the Wisconsin";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 32, 4, 879);
+    			add_location(span, file$4, 34, 4, 944);
     		},
 
     		m: function mount(target, anchor) {
@@ -3539,11 +3537,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(33:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot_1.name, type: "slot", source: "(35:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (28:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
+    // (30:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
     function create_default_slot_1(ctx) {
     	const block = {
     		c: noop,
@@ -3551,11 +3549,11 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(28:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(30:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
     	return block;
     }
 
-    // (41:4) <span slot="content">
+    // (43:4) <span slot="content">
     function create_content_slot(ctx) {
     	var span;
 
@@ -3564,7 +3562,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 40, 4, 1097);
+    			add_location(span, file$4, 42, 4, 1162);
     		},
 
     		m: function mount(target, anchor) {
@@ -3577,11 +3575,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(41:4) <span slot=\"content\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_content_slot.name, type: "slot", source: "(43:4) <span slot=\"content\">", ctx });
     	return block;
     }
 
-    // (36:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
+    // (38:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
     function create_default_slot(ctx) {
     	const block = {
     		c: noop,
@@ -3589,7 +3587,7 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(36:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(38:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
     	return block;
     }
 
@@ -3651,11 +3649,11 @@ var app = (function () {
     			card1.$$.fragment.c();
     			t2 = space();
     			card2.$$.fragment.c();
-    			add_location(ion_refresher_content, file$4, 17, 4, 424);
+    			add_location(ion_refresher_content, file$4, 19, 4, 489);
     			set_custom_element_data(ion_refresher, "slot", "fixed");
-    			add_location(ion_refresher, file$4, 16, 2, 364);
-    			add_location(ion_content, file$4, 14, 0, 345);
-    			dispose = listen_dev(ion_refresher, "ionRefresh", doRefresh);
+    			add_location(ion_refresher, file$4, 18, 2, 429);
+    			add_location(ion_content, file$4, 16, 0, 410);
+    			dispose = listen_dev(ion_refresher, "ionRefresh", doRefresh$1);
     		},
 
     		l: function claim(nodes) {
@@ -3725,11 +3723,13 @@ var app = (function () {
     	return block;
     }
 
-    function doRefresh(event) {
+    function doRefresh$1(event) {
       console.log('Do refresh');
 
       setTimeout(() => {
           console.log('Async operation has ended');
+          console.log(event);
+          console.log(event.target);
           event.target.complete();
         }, 2000);
     }

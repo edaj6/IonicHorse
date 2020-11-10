@@ -10,9 +10,9 @@
   function doRefresh(event) {
     console.log("Do refresh");
 
-    response = getData(
-      "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-    );
+    // response = getData(
+    //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
+    // );
 
     setTimeout(() => {
       console.log("Async operation has ended");

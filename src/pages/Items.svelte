@@ -7,6 +7,8 @@
 
     setTimeout(() => {
         console.log('Async operation has ended');
+        console.log(event);
+        console.log(event.target);
         event.target.complete();
       }, 2000);
   }
@@ -45,3 +47,4 @@
   </Card>
 
 </ion-content>
+
