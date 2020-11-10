@@ -3,19 +3,11 @@
   import { blur, slide, scale, fade, fly } from "svelte/transition";
   import fetcher from "../components/fetcher";
 
-  // let datastore = getData(
-  //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-  // );
-
   const url = "https://sveltehorsefunctionapp.azurewebsites.net/api/person";
   fetcher.seturl(url);
 
   function doRefresh(event) {
     console.log("Do refresh");
-
-    // datastore = getData(
-    //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-    // );
     fetcher.seturl(url);
 
     setTimeout(() => {

@@ -14,12 +14,12 @@ const store = {
       datastore.set(Promise.resolve(cache.get(url)));
     }
 
-    console.log("Load async");
+    // console.log("Load async");
     const load = async () => {
       const response = await fetch(url);
       const data = await response.json();
 
-      console.log("Data loaded, set cache");
+      // console.log("Data loaded, set cache");
 
       cache.set(url, data);
       datastore.set(Promise.resolve(data));
