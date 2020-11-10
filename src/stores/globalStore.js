@@ -6,7 +6,8 @@ const globalStore = writable({
   alert: false,
   alertText: "default alert",
   alertDanger: false,
-  selectedPage: ""
+  selectedPage: "",
+  doMakeWakeApiCall: true
 });
 
 const store = {
