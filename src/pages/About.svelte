@@ -7,8 +7,6 @@
     "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
   );
 
-  const refresher = document.querySelector("ion-refresher");
-
   function doRefresh(event) {
     console.log("Do refresh");
 
@@ -19,7 +17,6 @@
     setTimeout(() => {
       console.log("Async operation has ended");
       event.target.complete();
-      refresher.complete();
     }, 2000);
   }
 
