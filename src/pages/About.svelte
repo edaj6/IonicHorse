@@ -19,6 +19,7 @@
     setTimeout(() => {
       console.log("Async operation has ended");
       event.target.complete();
+      refresher.complete();
     }, 2000);
   }
 
@@ -27,7 +28,7 @@
     "https://storagejakob.blob.core.windows.net/blob-container-test/default-horse.jpg";
 </script>
 
-<ion-content class="app-page">
+<ion-content>
 
   <ion-refresher slot="fixed" on:ionRefresh={doRefresh}>
     <ion-refresher-content />

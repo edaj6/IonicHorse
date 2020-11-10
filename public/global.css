@@ -49,10 +49,11 @@ ion-card{
 
 /* Wide screen only */
 @media only screen and (min-width: 992px) {
-  .app-page  {
+  ion-content  {
     width: 100%;
-    border: 100px solid white;
+    border-left: 100px solid white;
     border-top: 0px;
+    border-bottom: 0px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -264,7 +265,7 @@ Hero
 */
 
 .hero {
-  min-height: calc(100vh - 5rem);
+  /* min-height: calc(100vh - 5rem); */
   background: linear-gradient(
       rgba(255, 255, 255, 0.3),
       rgba(255, 255, 255, 0.3)

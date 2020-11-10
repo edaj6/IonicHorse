@@ -12,7 +12,7 @@
   }
 </script>
 
-<ion-content class="app-page">
+<ion-content>
 
   <ion-refresher slot="fixed" on:ionRefresh={doRefresh}>
     <ion-refresher-content></ion-refresher-content>

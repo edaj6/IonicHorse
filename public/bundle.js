@@ -2776,7 +2776,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (57:2) {:catch e}
+    // (58:2) {:catch e}
     function create_catch_block(ctx) {
     	var div1, div0, h3, t1, h4, h4_intro, t3, p, t4_value = ctx.e + "", t4, p_intro;
 
@@ -2792,13 +2792,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 59, 8, 1696);
+    			add_location(h3, file$2, 60, 8, 1708);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 58, 6, 1667);
-    			add_location(h4, file$2, 61, 6, 1728);
-    			add_location(p, file$2, 62, 6, 1771);
+    			add_location(div0, file$2, 59, 6, 1679);
+    			add_location(h4, file$2, 62, 6, 1740);
+    			add_location(p, file$2, 63, 6, 1783);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 57, 4, 1634);
+    			add_location(div1, file$2, 58, 4, 1646);
     		},
 
     		m: function mount(target, anchor) {
@@ -2842,11 +2842,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(57:2) {:catch e}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(58:2) {:catch e}", ctx });
     	return block;
     }
 
-    // (40:2) {:then data}
+    // (41:2) {:then data}
     function create_then_block(ctx) {
     	var each_1_anchor;
 
@@ -2910,11 +2910,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(40:2) {:then data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(41:2) {:then data}", ctx });
     	return block;
     }
 
-    // (41:4) {#each data as { firstName, lastName, birthday, url }
+    // (42:4) {#each data as { firstName, lastName, birthday, url }
     function create_each_block$1(ctx) {
     	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, br0, t7, br1, t8, t9_value = ctx.birthday + "", t9, t10;
 
@@ -2938,13 +2938,13 @@ var app = (function () {
     			t8 = space();
     			t9 = text(t9_value);
     			t10 = space();
-    			add_location(ion_card_subtitle, file$2, 43, 10, 1228);
-    			add_location(ion_card_title, file$2, 44, 10, 1287);
-    			add_location(ion_card_header, file$2, 42, 8, 1199);
-    			add_location(br0, file$2, 49, 10, 1477);
-    			add_location(br1, file$2, 51, 10, 1525);
-    			add_location(ion_card_content, file$2, 47, 8, 1382);
-    			add_location(ion_card, file$2, 41, 6, 1179);
+    			add_location(ion_card_subtitle, file$2, 44, 10, 1240);
+    			add_location(ion_card_title, file$2, 45, 10, 1299);
+    			add_location(ion_card_header, file$2, 43, 8, 1211);
+    			add_location(br0, file$2, 50, 10, 1489);
+    			add_location(br1, file$2, 52, 10, 1537);
+    			add_location(ion_card_content, file$2, 48, 8, 1394);
+    			add_location(ion_card, file$2, 42, 6, 1191);
     		},
 
     		m: function mount(target, anchor) {
@@ -2987,11 +2987,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(41:4) {#each data as { firstName, lastName, birthday, url }", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(42:4) {#each data as { firstName, lastName, birthday, url }", ctx });
     	return block;
     }
 
-    // (38:20)       <Skeleton repeat={8}
+    // (39:20)       <Skeleton repeat={8}
     function create_pending_block(ctx) {
     	var current;
 
@@ -3028,7 +3028,7 @@ var app = (function () {
     			destroy_component(skeleton, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(38:20)       <Skeleton repeat={8}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(39:20)       <Skeleton repeat={8}", ctx });
     	return block;
     }
 
@@ -3060,12 +3060,11 @@ var app = (function () {
     			t2 = space();
 
     			info.block.c();
-    			add_location(ion_refresher_content, file$2, 32, 4, 908);
+    			add_location(ion_refresher_content, file$2, 33, 4, 920);
     			set_custom_element_data(ion_refresher, "slot", "fixed");
-    			add_location(ion_refresher, file$2, 31, 2, 848);
-    			add_location(p, file$2, 35, 2, 959);
-    			set_custom_element_data(ion_content, "class", "app-page");
-    			add_location(ion_content, file$2, 29, 0, 812);
+    			add_location(ion_refresher, file$2, 32, 2, 860);
+    			add_location(p, file$2, 36, 2, 971);
+    			add_location(ion_content, file$2, 30, 0, 841);
     			dispose = listen_dev(ion_refresher, "ionRefresh", ctx.doRefresh);
     		},
 
@@ -3154,6 +3153,7 @@ var app = (function () {
         setTimeout(() => {
           console.log("Async operation has ended");
           event.target.complete();
+          refresher.complete();
         }, 2000);
       }
 
@@ -3491,7 +3491,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Først rejste jeg tilbage og så frem igen.. crazy";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 24, 4, 649);
+    			add_location(span, file$4, 24, 4, 632);
     		},
 
     		m: function mount(target, anchor) {
@@ -3529,7 +3529,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Capital of the Wisconsin";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 32, 4, 896);
+    			add_location(span, file$4, 32, 4, 879);
     		},
 
     		m: function mount(target, anchor) {
@@ -3567,7 +3567,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 40, 4, 1114);
+    			add_location(span, file$4, 40, 4, 1097);
     		},
 
     		m: function mount(target, anchor) {
@@ -3654,10 +3654,9 @@ var app = (function () {
     			card1.$$.fragment.c();
     			t2 = space();
     			card2.$$.fragment.c();
-    			add_location(ion_refresher_content, file$4, 17, 4, 441);
+    			add_location(ion_refresher_content, file$4, 17, 4, 424);
     			set_custom_element_data(ion_refresher, "slot", "fixed");
-    			add_location(ion_refresher, file$4, 16, 2, 381);
-    			set_custom_element_data(ion_content, "class", "app-page");
+    			add_location(ion_refresher, file$4, 16, 2, 364);
     			add_location(ion_content, file$4, 14, 0, 345);
     			dispose = listen_dev(ion_refresher, "ionRefresh", doRefresh);
     		},
