@@ -1,11 +1,20 @@
 <script>
   import { blur, slide, scale, fade, fly } from "svelte/transition";
   import Card from "../components/Card/Card.svelte";
+
+  function doRefresh(event) {
+    console.log('Do refresh');
+
+    setTimeout(() => {
+        console.log('Async operation has ended');
+        event.target.complete();
+      }, 2000);
+  }
 </script>
 
 <ion-content class="app-page">
 
-  <ion-refresher slot="fixed">
+  <ion-refresher slot="fixed" on:ionRefresh={doRefresh}>
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
