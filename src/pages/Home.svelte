@@ -12,7 +12,7 @@
       `https://sveltehorsefunctionapp.azurewebsites.net/api/wake`
     );
 
-    console.log("make dummy login to wake api/sqlserver, remove in production" + Date.now());
+    console.log("make dummy login to wake api/sqlserver, remove in production");
     await loginUser({ email, password });
   });
 </script>

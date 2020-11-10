@@ -1,18 +1,22 @@
 <script>
   import Skeleton from "../components/Skeleton.svelte";
   import { blur, slide, scale, fade, fly } from "svelte/transition";
-  import { getData } from "../components/fetcher";
+  import fetcher from "../components/fetcher";
 
-  let response = getData(
-    "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
-  );
+  // let datastore = getData(
+  //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
+  // );
+
+  const url = "https://sveltehorsefunctionapp.azurewebsites.net/api/person";
+  fetcher.seturl(url);
 
   function doRefresh(event) {
     console.log("Do refresh");
 
-    // response = getData(
+    // datastore = getData(
     //   "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
     // );
+    fetcher.seturl(url);
 
     setTimeout(() => {
       console.log("Async operation has ended");
@@ -33,7 +37,7 @@
 
   <p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
 
-  {#await $response}
+  {#await $fetcher}
     <Skeleton repeat={8} />
   {:then data}
     {#each data as { firstName, lastName, birthday, url }, index}
