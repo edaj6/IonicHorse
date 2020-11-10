@@ -2,9 +2,12 @@
   import Skeleton from "../components/Skeleton.svelte";
   import { blur, slide, scale, fade, fly } from "svelte/transition";
   import { getData } from "../components/fetcher";
-  let response;
 
-  const refresher = document.querySelector('ion-refresher')
+  let response = getData(
+    "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
+  );
+
+  const refresher = document.querySelector("ion-refresher");
 
   function doRefresh(event) {
     console.log("Do refresh");
@@ -26,11 +29,9 @@
 
 <ion-content class="app-page">
 
-  <ion-content>
-    <ion-refresher slot="fixed" on:ionRefresh={doRefresh}>
-      <ion-refresher-content />
-    </ion-refresher>
-  </ion-content>
+  <ion-refresher slot="fixed" on:ionRefresh={doRefresh}>
+    <ion-refresher-content />
+  </ion-refresher>
 
   <p>Udviklere på dette projekt (data fra dotnet azure function/cosmos db)</p>
 

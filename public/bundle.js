@@ -2776,7 +2776,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:2) {:catch e}
+    // (57:2) {:catch e}
     function create_catch_block(ctx) {
     	var div1, div0, h3, t1, h4, h4_intro, t3, p, t4_value = ctx.e + "", t4, p_intro;
 
@@ -2792,13 +2792,13 @@ var app = (function () {
     			t3 = space();
     			p = element("p");
     			t4 = text(t4_value);
-    			add_location(h3, file$2, 56, 8, 1588);
+    			add_location(h3, file$2, 59, 8, 1696);
     			attr_dev(div0, "class", "right");
-    			add_location(div0, file$2, 55, 6, 1559);
-    			add_location(h4, file$2, 58, 6, 1620);
-    			add_location(p, file$2, 59, 6, 1663);
+    			add_location(div0, file$2, 58, 6, 1667);
+    			add_location(h4, file$2, 61, 6, 1728);
+    			add_location(p, file$2, 62, 6, 1771);
     			attr_dev(div1, "class", "box effect2");
-    			add_location(div1, file$2, 54, 4, 1526);
+    			add_location(div1, file$2, 57, 4, 1634);
     		},
 
     		m: function mount(target, anchor) {
@@ -2842,11 +2842,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(54:2) {:catch e}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_catch_block.name, type: "catch", source: "(57:2) {:catch e}", ctx });
     	return block;
     }
 
-    // (37:2) {:then data}
+    // (40:2) {:then data}
     function create_then_block(ctx) {
     	var each_1_anchor;
 
@@ -2910,11 +2910,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(37:2) {:then data}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_then_block.name, type: "then", source: "(40:2) {:then data}", ctx });
     	return block;
     }
 
-    // (38:4) {#each data as { firstName, lastName, birthday, url }
+    // (41:4) {#each data as { firstName, lastName, birthday, url }
     function create_each_block$1(ctx) {
     	var ion_card, ion_card_header, ion_card_subtitle, t1, ion_card_title, t2_value = ctx.firstName + "", t2, t3, t4_value = ctx.lastName + "", t4, t5, ion_card_content, t6, br0, t7, br1, t8, t9_value = ctx.birthday + "", t9, t10;
 
@@ -2938,13 +2938,13 @@ var app = (function () {
     			t8 = space();
     			t9 = text(t9_value);
     			t10 = space();
-    			add_location(ion_card_subtitle, file$2, 40, 10, 1120);
-    			add_location(ion_card_title, file$2, 41, 10, 1179);
-    			add_location(ion_card_header, file$2, 39, 8, 1091);
-    			add_location(br0, file$2, 46, 10, 1369);
-    			add_location(br1, file$2, 48, 10, 1417);
-    			add_location(ion_card_content, file$2, 44, 8, 1274);
-    			add_location(ion_card, file$2, 38, 6, 1071);
+    			add_location(ion_card_subtitle, file$2, 43, 10, 1228);
+    			add_location(ion_card_title, file$2, 44, 10, 1287);
+    			add_location(ion_card_header, file$2, 42, 8, 1199);
+    			add_location(br0, file$2, 49, 10, 1477);
+    			add_location(br1, file$2, 51, 10, 1525);
+    			add_location(ion_card_content, file$2, 47, 8, 1382);
+    			add_location(ion_card, file$2, 41, 6, 1179);
     		},
 
     		m: function mount(target, anchor) {
@@ -2987,11 +2987,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(38:4) {#each data as { firstName, lastName, birthday, url }", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(41:4) {#each data as { firstName, lastName, birthday, url }", ctx });
     	return block;
     }
 
-    // (35:20)       <Skeleton repeat={8}
+    // (38:20)       <Skeleton repeat={8}
     function create_pending_block(ctx) {
     	var current;
 
@@ -3028,12 +3028,12 @@ var app = (function () {
     			destroy_component(skeleton, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(35:20)       <Skeleton repeat={8}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_pending_block.name, type: "pending", source: "(38:20)       <Skeleton repeat={8}", ctx });
     	return block;
     }
 
     function create_fragment$2(ctx) {
-    	var ion_content1, ion_content0, ion_refresher, ion_refresher_content, t0, p, t2, promise, current, dispose;
+    	var ion_content, ion_refresher, ion_refresher_content, t0, p, t2, promise, current, dispose;
 
     	let info = {
     		ctx,
@@ -3051,8 +3051,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			ion_content1 = element("ion-content");
-    			ion_content0 = element("ion-content");
+    			ion_content = element("ion-content");
     			ion_refresher = element("ion-refresher");
     			ion_refresher_content = element("ion-refresher-content");
     			t0 = space();
@@ -3061,13 +3060,12 @@ var app = (function () {
     			t2 = space();
 
     			info.block.c();
-    			add_location(ion_refresher_content, file$2, 28, 6, 780);
+    			add_location(ion_refresher_content, file$2, 32, 4, 908);
     			set_custom_element_data(ion_refresher, "slot", "fixed");
-    			add_location(ion_refresher, file$2, 27, 4, 718);
-    			add_location(ion_content0, file$2, 26, 2, 699);
-    			add_location(p, file$2, 32, 2, 851);
-    			set_custom_element_data(ion_content1, "class", "app-page");
-    			add_location(ion_content1, file$2, 24, 0, 663);
+    			add_location(ion_refresher, file$2, 31, 2, 848);
+    			add_location(p, file$2, 35, 2, 959);
+    			set_custom_element_data(ion_content, "class", "app-page");
+    			add_location(ion_content, file$2, 29, 0, 812);
     			dispose = listen_dev(ion_refresher, "ionRefresh", ctx.doRefresh);
     		},
 
@@ -3076,16 +3074,15 @@ var app = (function () {
     		},
 
     		m: function mount(target, anchor) {
-    			insert_dev(target, ion_content1, anchor);
-    			append_dev(ion_content1, ion_content0);
-    			append_dev(ion_content0, ion_refresher);
+    			insert_dev(target, ion_content, anchor);
+    			append_dev(ion_content, ion_refresher);
     			append_dev(ion_refresher, ion_refresher_content);
-    			append_dev(ion_content1, t0);
-    			append_dev(ion_content1, p);
-    			append_dev(ion_content1, t2);
+    			append_dev(ion_content, t0);
+    			append_dev(ion_content, p);
+    			append_dev(ion_content, t2);
 
-    			info.block.m(ion_content1, info.anchor = null);
-    			info.mount = () => ion_content1;
+    			info.block.m(ion_content, info.anchor = null);
+    			info.mount = () => ion_content;
     			info.anchor = null;
 
     			current = true;
@@ -3117,7 +3114,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach_dev(ion_content1);
+    				detach_dev(ion_content);
     			}
 
     			info.block.d();
@@ -3140,7 +3137,12 @@ var app = (function () {
     	$$self.$$.on_destroy.push(() => $$unsubscribe_response());
 
     	
-      let response; $$subscribe_response();
+
+      let response = getData(
+        "https://sveltehorsefunctionapp.azurewebsites.net/api/person"
+      ); $$subscribe_response();
+
+      const refresher = document.querySelector("ion-refresher");
 
       function doRefresh(event) {
         console.log("Do refresh");
