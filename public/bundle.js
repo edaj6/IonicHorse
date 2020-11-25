@@ -3523,9 +3523,9 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			span = element("span");
-    			span.textContent = "Først rejste jeg tilbage og så frem igen.. crazy";
+    			span.textContent = "Første klasses hest, 6 gangarter. Pris 2.000.000";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 26, 4, 703);
+    			add_location(span, file$4, 26, 4, 694);
     		},
 
     		m: function mount(target, anchor) {
@@ -3542,7 +3542,7 @@ var app = (function () {
     	return block;
     }
 
-    // (23:2) <Card      likes="4"      lastchange="200"      img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
+    // (23:2) <Card      likes="4"      lastchange="200"      img="https://storagejakob.blob.core.windows.net/blob-images/horse1.jpg">
     function create_default_slot_2(ctx) {
     	const block = {
     		c: noop,
@@ -3550,7 +3550,7 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(23:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_2.name, type: "slot", source: "(23:2) <Card      likes=\"4\"      lastchange=\"200\"      img=\"https://storagejakob.blob.core.windows.net/blob-images/horse1.jpg\">", ctx });
     	return block;
     }
 
@@ -3561,9 +3561,9 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			span = element("span");
-    			span.textContent = "Capital of the Wisconsin";
+    			span.textContent = "Sød og rolig børnepony. Han er sød, rar og nem i håndtering både derhjemme og i byen";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 34, 4, 950);
+    			add_location(span, file$4, 34, 4, 930);
     		},
 
     		m: function mount(target, anchor) {
@@ -3580,7 +3580,7 @@ var app = (function () {
     	return block;
     }
 
-    // (30:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
+    // (30:2) <Card      likes="5"      comments="10"      lastchange="3"      img="https://storagejakob.blob.core.windows.net/blob-images/horse2.jpg">
     function create_default_slot_1(ctx) {
     	const block = {
     		c: noop,
@@ -3588,7 +3588,7 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(30:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(30:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"3\"      img=\"https://storagejakob.blob.core.windows.net/blob-images/horse2.jpg\">", ctx });
     	return block;
     }
 
@@ -3599,9 +3599,9 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			span = element("span");
-    			span.textContent = "Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,\r\n      Madison was named the capital of the Wisconsin Territory in 1836.";
+    			span.textContent = "En kvalitetspony. Vallak på 2 1/2 år sættes nu til salg. Søger du fremtidens pony du selv ønsker at forme? Pris 100.000";
     			attr_dev(span, "slot", "content");
-    			add_location(span, file$4, 42, 4, 1168);
+    			add_location(span, file$4, 42, 4, 1205);
     		},
 
     		m: function mount(target, anchor) {
@@ -3618,7 +3618,7 @@ var app = (function () {
     	return block;
     }
 
-    // (38:2) <Card      likes="5"      comments="10"      lastchange="8762"      img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
+    // (38:2) <Card      likes="2"      comments="11"      lastchange="8762"      img="https://storagejakob.blob.core.windows.net/blob-images/horse3.jpg">
     function create_default_slot(ctx) {
     	const block = {
     		c: noop,
@@ -3626,7 +3626,7 @@ var app = (function () {
     		p: noop,
     		d: noop
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(38:2) <Card      likes=\"5\"      comments=\"10\"      lastchange=\"8762\"      img=\"https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg\">", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(38:2) <Card      likes=\"2\"      comments=\"11\"      lastchange=\"8762\"      img=\"https://storagejakob.blob.core.windows.net/blob-images/horse3.jpg\">", ctx });
     	return block;
     }
 
@@ -3637,7 +3637,7 @@ var app = (function () {
     		props: {
     		likes: "4",
     		lastchange: "200",
-    		img: "https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg",
+    		img: "https://storagejakob.blob.core.windows.net/blob-images/horse1.jpg",
     		$$slots: {
     		default: [create_default_slot_2],
     		content: [create_content_slot_2]
@@ -3652,7 +3652,7 @@ var app = (function () {
     		likes: "5",
     		comments: "10",
     		lastchange: "3",
-    		img: "https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg",
+    		img: "https://storagejakob.blob.core.windows.net/blob-images/horse2.jpg",
     		$$slots: {
     		default: [create_default_slot_1],
     		content: [create_content_slot_1]
@@ -3664,10 +3664,10 @@ var app = (function () {
 
     	var card2 = new Card({
     		props: {
-    		likes: "5",
-    		comments: "10",
+    		likes: "2",
+    		comments: "11",
     		lastchange: "8762",
-    		img: "https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg",
+    		img: "https://storagejakob.blob.core.windows.net/blob-images/horse3.jpg",
     		$$slots: {
     		default: [create_default_slot],
     		content: [create_content_slot]

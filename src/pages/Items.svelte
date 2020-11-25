@@ -23,26 +23,25 @@
   <Card
     likes="4"
     lastchange="200"
-    img="https://cdn.pixabay.com/photo/2020/10/10/21/54/performers-5644247_1280.jpg">
-    <span slot="content">Først rejste jeg tilbage og så frem igen.. crazy</span>
+    img="https://storagejakob.blob.core.windows.net/blob-images/horse1.jpg">
+    <span slot="content">Første klasses hest, 6 gangarter. Pris 2.000.000</span>
   </Card>
 
   <Card
     likes="5"
     comments="10"
     lastchange="3"
-    img="https://cdn.pixabay.com/photo/2020/09/18/12/16/jewel-beetle-5581683_1280.jpg">
-    <span slot="content">Capital of the Wisconsin</span>
+    img="https://storagejakob.blob.core.windows.net/blob-images/horse2.jpg">
+    <span slot="content">Sød og rolig børnepony. Han er sød, rar og nem i håndtering både derhjemme og i byen</span>
   </Card>
 
   <Card
-    likes="5"
-    comments="10"
+    likes="2"
+    comments="11"
     lastchange="8762"
-    img="https://cdn.pixabay.com/photo/2020/10/27/14/59/deer-5691010_1280.jpg">
+    img="https://storagejakob.blob.core.windows.net/blob-images/horse3.jpg">
     <span slot="content">
-      Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-      Madison was named the capital of the Wisconsin Territory in 1836.
+      En kvalitetspony. Vallak på 2 1/2 år sættes nu til salg. Søger du fremtidens pony du selv ønsker at forme? Pris 100.000
     </span>
   </Card>
 
